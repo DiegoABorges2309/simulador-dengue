@@ -9,6 +9,11 @@ from seir_sei.euler import Euler
 
 
 class Motor:
+    """
+    Clase 'Motor' que se encarga de iniciar
+    los datos de la simulacion.
+    """
+
     def __init__(
         self,
         humanos_poblacion: int,
@@ -19,8 +24,7 @@ class Motor:
         datos_simulacion_vector: DatosSimulacionVector,
     ):
         """
-        Clase 'Motor' que se encarga de iniciar
-        los datos de la simulacion.
+        Inicializador de la clase 'Motor'.
 
         Parameters
         ----------
