@@ -98,8 +98,8 @@ class ModeloInicial(ABC):
     @abstractmethod
     def actualizar_variables(
         self,
-        valore_nuevo_susceptibles: float,
-        valore_nuevo_expuestos: float,
-        valore_nuevo_infectados: float,
+        valor_nuevo_susceptibles: float,
+        valor_nuevo_expuestos: float,
+        valor_nuevo_infectados: float,
     ):
         pass

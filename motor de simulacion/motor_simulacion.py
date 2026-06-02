@@ -18,7 +18,7 @@ class Motor:
         self,
         humanos_poblacion: int,
         infectados_humanos: int,
-        datos_simualcion_humanos: DatosSimulacionHumanos,
+        datos_simulacion_humanos: DatosSimulacionHumanos,
         vector_poblacion: int,
         infectados_vectores: int,
         datos_simulacion_vector: DatosSimulacionVector,
@@ -33,7 +33,7 @@ class Motor:
         infectados_humanos
             Cantidad inicial de infectados humanos
             al inicio.
-        datos_simualcion_humanos
+        datos_simulacion_humanos
             Datos necesarios para la simulacion
             por el lado de humanos.
         vector_poblacion
@@ -46,10 +46,10 @@ class Motor:
             por el lado de vectores.
         """
         self.lista_de_dias = []
-        self.datos_h = datos_simualcion_humanos
+        self.datos_h = datos_simulacion_humanos
         self.datos_v = datos_simulacion_vector
         self.modelo_seir = Seir(
-            humanos_poblacion, infectados_humanos, datos_simualcion_humanos
+            humanos_poblacion, infectados_humanos, datos_simulacion_humanos
         )
         self.modelo_sei = Sei(
             vector_poblacion, infectados_vectores, datos_simulacion_vector
@@ -81,9 +81,8 @@ class Motor:
         Funcion que da inicio a la simulacion
         con los datos ingresados.
         """
-        valor = True
         dia = 0
-        while valor:
+        while True:
             dia += 1
             self.variable_bombeo_agua(dia, 30)
             self.euler.calculo_euler(self.modelo_seir, self.modelo_sei)
@@ -94,5 +93,10 @@ class Motor:
                 "vector": self.euler.variables_v[-1],
             }
             self.lista_de_dias.append(valores_dia_transcurrido)
-            if self.modelo_seir.infectados < 1 and self.modelo_sei.infectados < 1:
-                valor = False
+            if (
+                self.modelo_seir.infectados < 1
+                and self.modelo_seir.expuestos < 1
+                and self.modelo_sei.infectados < 1
+                and self.modelo_sei.expuestos < 1
+            ):
+                break

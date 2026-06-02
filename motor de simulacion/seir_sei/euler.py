@@ -147,7 +147,7 @@ class Euler:
                 modelo_sei.infectados,
             )
         )
-        for _ in range(pasos):
+        while self.dias_reales < self.tiempo_final:
             self.dias_reales += self.paso_tiempo
             calculo_nuevo_h = self.recalcular_metodo_seir(modelo_seir, modelo_sei)
             calculo_nuevo_v = self.recalcular_metodo_sei(modelo_sei, modelo_seir)

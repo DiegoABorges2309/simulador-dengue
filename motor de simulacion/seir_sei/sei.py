@@ -189,10 +189,6 @@ class Sei(ModeloInicial):
             El nuevo valor de los expuestos vector.
         valor_nuevo_infectados
             El nuevo valor de los infectados vector.
-        valor_nuevo_recuperados
-            El nuevo valor de los recuperados vector.
-        valor_nuevo_muertes
-            El nuevo valor de los muertos vector.
         """
         self.susceptibles = valor_nuevo_susceptibles
         self.expuestos = valor_nuevo_expuestos

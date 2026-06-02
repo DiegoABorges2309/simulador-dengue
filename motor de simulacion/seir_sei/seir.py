@@ -50,7 +50,7 @@ class Seir(ModeloInicial):
         self,
         n_poblacion: float,
         n_infectados_inicio: float,
-        datos_simulacion: DatosSimulacionHumanos,
+        datos_simulacion: DatosSimulacionHumanos
     ):
         """
         Inicializa el modelo SEIR para humanos.
