@@ -1,2 +1,2 @@
 # simulador-dengue
-DESARROLLO DE UN SISTEMA DE SIMULACIÓN SOBRE LA PROPAGACIÓN DEL DENGUE MEDIANTE EL VECTOR Aedes aegypti, EN ESCENARIOS DE BROTE EN PUNTO FIJO, ESTADO FALCÓN
+Desarrollo de un sistema de simulación sobre la propagación del dengue mediante el vector Aedes aegypti, en escenarios de brote en Punto Fijo, Falcon.
