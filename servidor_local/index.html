@@ -8,6 +8,7 @@
     <script src="archivos_locales/datos_offline/leaflet.js"></script>
     <script src="archivos_locales/datos_offline/bootstrap.bundle.min.js"></script>
     <script src="archivos_locales/datos_offline/leaflet.awesome-markers.js"></script>
+    <script src="archivos_locales/scripts/geojson.js"></script>
     <link rel="stylesheet" href="archivos_locales/datos_offline/leaflet.css" />
     <link rel="stylesheet" href="archivos_locales/datos_offline/bootstrap.min.css" />
     <link rel="stylesheet" href="archivos_locales/datos_offline/bootstrap-glyphicons.css" />
@@ -65,16 +66,19 @@
     <div class="folium-map" id="map_d2bbe2bf14e73f367714db01eb2102da"></div>
 
 </body>
+
+
 <script>
+
 
 
     var map_d2bbe2bf14e73f367714db01eb2102da = L.map(
         "map_d2bbe2bf14e73f367714db01eb2102da",
         {
-            center: [11.7058, -70.1857],
+            center: [11.7188, -70.1727],
             crs: L.CRS.EPSG3857,
             ...{
-                "zoom": 13,
+                "zoom": 16,
                 "zoomControl": true,
                 "preferCanvas": false,
             }
@@ -89,7 +93,7 @@
     var tile_layer_7ffd0973457c1472431de9d9369f1792 = L.tileLayer(
         "http://localhost:2000/tiles_local/{z}/{x}/{y}.png",
         {
-            "minZoom": 10,
+            "minZoom": 13.5,
             "maxZoom": 16,
             "maxNativeZoom": 16,
             "noWrap": false,
@@ -104,6 +108,8 @@
 
 
     tile_layer_7ffd0973457c1472431de9d9369f1792.addTo(map_d2bbe2bf14e73f367714db01eb2102da);
+    colocarGeojson(map_d2bbe2bf14e73f367714db01eb2102da);
+    antAeropuerto(map_d2bbe2bf14e73f367714db01eb2102da)
 
 </script>
 

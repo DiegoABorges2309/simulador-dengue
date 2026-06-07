@@ -17,6 +17,9 @@ def iniciar_servidor():
 
     hilo = threading.Thread(target=servidor.serve_forever, daemon=True)
     hilo.start()
+    
+    while True:
+        pass
 
 
 def cerrar_servidor():
@@ -24,3 +27,6 @@ def cerrar_servidor():
     if servidor:
         servidor.shutdown()
         servidor.server_close()
+
+if __name__ == '__main__':
+    iniciar_servidor()
