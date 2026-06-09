@@ -2,7 +2,8 @@ import { tileLayer, Map, CRS } from "leaflet"
 import { GeoJson } from "./geojson";
 import { Puntos } from "./puntos";
 import { EstilosMapa } from "./estilo-mapa";
-import { CoordenadasAleatoreas } from "./coordenadasAleatorias";
+import { SimulacionDePuntos } from "./simulacionPuntos";
+import { SimuladorRapido } from "./simulacionRapida";
 
 export class ConfigMapa {
     public latitud: number = 11.6988;
@@ -43,16 +44,17 @@ export class ConfigMapa {
     }
 
     public visualizar_antAeropuerto() {
+        let simulacion = new SimulacionDePuntos(1000, 12, this.mapa_punto_fijo, this.gjson.geojson_inicial)
+        simulacion.crearPuntos()
+        simulacion.colocarPuntos()
+        let hola = new SimuladorRapido(simulacion);
+        // hola.iniciar()
         this.gjson.agregar_gj_antAeropuerto();
         this.mapa_punto_fijo.setView([11.719994, -70.191911], 16);
-        this.gjson.dibujar2(3000);
+        // this.gjson.dibujar2(3000);
         let stylos = new EstilosMapa(this.mapa_punto_fijo)
         stylos.colorearFueraLimite(this.gjson.geojson_inicial);
-        let random = new CoordenadasAleatoreas()
-        let cantidad = random.generarCoordenadasAleatoreas(this.gjson.geojson_inicial, 10)
-        for (let i = 0; i < 10; i++){
-            console.log(cantidad[i])
-        }
+        // let hola = new SimulacionDengue(this.mapa_punto_fijo, this.gjson.geojson_inicial)
     }
 }
 

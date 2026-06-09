@@ -2,12 +2,12 @@ import { FeatureCollection, MultiPolygon } from 'geojson';
 import * as turf from "@turf/turf";
 import { Polygon } from 'leaflet';
 
-export class CoordenadasAleatoreas {
+export class CoordenadasAleatorias {
     public coordenadas: number[][] = [];
 
     constructor() { }
 
-    public generarCoordenadasAleatoreas(geoJsonMapa: FeatureCollection, cantidadDeCoordenadas: number) {
+    public generarCoordenadas(geoJsonMapa: FeatureCollection, cantidadDeCoordenadas: number) {
         var linea = geoJsonMapa.features[0];
         var poligono: Polygon | MultiPolygon = turf.lineToPolygon(linea as any);
 
