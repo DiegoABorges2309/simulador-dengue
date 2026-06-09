@@ -1,0 +1,75 @@
+import { Map, CRS, tileLayer } from "leaflet";
+import { FeatureCollection } from "geojson";
+export const GEOJSON = {
+  ANTAEROPUERTO: {
+    type: "FeatureCollection",
+    features: [
+      {
+        type: "Feature",
+        properties: {},
+        geometry: {
+          type: "LineString",
+          coordinates: [
+            [-70.199528, 11.717374],
+            [-70.196579, 11.717557],
+            [-70.192726, 11.717776],
+            [-70.189611, 11.717963],
+            [-70.184961, 11.718252],
+            [-70.184541, 11.718278],
+            [-70.18445, 11.718286],
+            [-70.184383, 11.718276],
+            [-70.184327, 11.71831],
+            [-70.1843, 11.718394],
+            [-70.184321, 11.718499],
+            [-70.184658, 11.71944],
+            [-70.184935, 11.720257],
+            [-70.185664, 11.721855],
+            [-70.185833, 11.722203],
+            [-70.186004, 11.722649],
+            [-70.186741, 11.724483],
+            [-70.188286, 11.72432],
+            [-70.190356, 11.723795],
+            [-70.193118, 11.723086],
+            [-70.193241, 11.722818],
+            [-70.194336, 11.722734],
+            [-70.196745, 11.722155],
+            [-70.196696, 11.721908],
+            [-70.197656, 11.721651],
+            [-70.197693, 11.721127],
+            [-70.197817, 11.720502],
+            [-70.197902, 11.719536],
+            [-70.199477, 11.719365],
+            [-70.199531, 11.717375],
+          ],
+        },
+        bbox: [-70.199531, 11.717374, -70.1843, 11.724483],
+      },
+    ],
+  } as FeatureCollection,
+  PUNTOFIJO: {} as FeatureCollection,
+  CAJADEAGUA: {} as FeatureCollection,
+};
+
+export const MAPA = {
+  MAPAPUNTOFIJO: new Map("mapa", {
+    center: [11.6988, -70.1977],
+    crs: CRS.EPSG3857,
+    ...{
+      zoom: 14,
+      zoomControl: true,
+      preferCanvas: false,
+    },
+  }),
+
+  CAPA: tileLayer("http://localhost:2000/tiles_local/{z}/{x}/{y}.png", {
+    minZoom: 13,
+    maxZoom: 16,
+    maxNativeZoom: 16,
+    noWrap: false,
+    attribution: "OpenStreetMap",
+    subdomains: "abc",
+    detectRetina: false,
+    tms: false,
+    opacity: 1,
+  }),
+};

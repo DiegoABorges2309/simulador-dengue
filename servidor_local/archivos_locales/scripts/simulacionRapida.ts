@@ -1,4 +1,4 @@
-import { SimulacionDePuntos } from './simulacionPuntos'; // Ajusta la ruta según tu proyecto
+import { SimulacionDePuntos } from './simulacion-puntos'; // Ajusta la ruta según tu proyecto
 
 export class SimuladorRapido {
     private simulacion: SimulacionDePuntos;

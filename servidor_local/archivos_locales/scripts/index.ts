@@ -1,63 +1,45 @@
-import { tileLayer, Map, CRS } from "leaflet"
-import { GeoJson } from "./geojson";
-import { Puntos } from "./puntos";
 import { EstilosMapa } from "./estilo-mapa";
-import { SimulacionDePuntos } from "./simulacionPuntos";
-import { SimuladorRapido } from "./simulacionRapida";
+import { SimulacionDePuntos } from "./simulacion-puntos";
+import { MAPA, GEOJSON } from "./variables-configuracion";
+import { LimitesGeograficos } from "./limites-geograficos";
 
 export class ConfigMapa {
-    public latitud: number = 11.6988;
-    public longitud: number = -70.1977;
-    public mapa_punto_fijo = new Map("mapa",
-        {
-            center: [this.latitud, this.longitud],
-            crs: CRS.EPSG3857,
-            ...{
-                "zoom": 14,
-                "zoomControl": true,
-                "preferCanvas": false,
-            }
-        });
-    public capa_inicial = tileLayer(
-        "http://localhost:2000/tiles_local/{z}/{x}/{y}.png",
-        {
-            "minZoom": 13,
-            "maxZoom": 16,
-            "maxNativeZoom": 16,
-            "noWrap": false,
-            "attribution": "OpenStreetMap",
-            "subdomains": "abc",
-            "detectRetina": false,
-            "tms": false,
-            "opacity": 1,
-        }
-    ).addTo(this.mapa_punto_fijo);
+  private simulacionPuntos: SimulacionDePuntos | null = null;
+  private estilosMapa: EstilosMapa = new EstilosMapa();
+  private limitesGeograficos: LimitesGeograficos = new LimitesGeograficos();
+  public latitud: number = 11.6988;
+  public longitud: number = -70.1977;
+  public mapaPuntoFijo = MAPA.MAPAPUNTOFIJO;
+  public capaInicial = MAPA.CAPA;
+  public constructor() {
+    this.capaInicial.addTo(this.mapaPuntoFijo);
+  }
 
-    public gjson = new GeoJson(this.mapa_punto_fijo);
-    public constructor() { };
+  public visualizarPuntoFijo() {
+    this.mapaPuntoFijo.setView([this.latitud, this.longitud], 12);
+  }
 
-    public lista_puntos: Puntos[] = [];
+  public visualizarAntAeropuerto() {
+    this.mapaPuntoFijo.setView([11.719994, -70.191911], 16);
+    this.estilosMapa.colorearFueraLimite(GEOJSON.ANTAEROPUERTO);
+    this.limitesGeograficos.dibujarLimiteAntAeropuerto();
+  }
 
-    public visualizar_puntoFijo() {
-        this.gjson.agregar_gj_antAeropuerto();
-        this.mapa_punto_fijo.setView([this.latitud, this.longitud], 12);
-    }
-
-    public visualizar_antAeropuerto() {
-        let simulacion = new SimulacionDePuntos(1000, 12, this.mapa_punto_fijo, this.gjson.geojson_inicial)
-        simulacion.crearPuntos()
-        simulacion.colocarPuntos()
-        let hola = new SimuladorRapido(simulacion);
-        // hola.iniciar()
-        this.gjson.agregar_gj_antAeropuerto();
-        this.mapa_punto_fijo.setView([11.719994, -70.191911], 16);
-        // this.gjson.dibujar2(3000);
-        let stylos = new EstilosMapa(this.mapa_punto_fijo)
-        stylos.colorearFueraLimite(this.gjson.geojson_inicial);
-        // let hola = new SimulacionDengue(this.mapa_punto_fijo, this.gjson.geojson_inicial)
-    }
+  public crearSimulacionPuntosAntAeropuerto(
+    cantidadSusceptibles: number,
+    cantidadInfectados: number,
+  ) {
+    this.simulacionPuntos = new SimulacionDePuntos(
+      cantidadSusceptibles,
+      cantidadInfectados,
+      GEOJSON.ANTAEROPUERTO,
+    );
+    this.simulacionPuntos.crearPuntos();
+    this.simulacionPuntos.colocarPuntos();
+  }
 }
 
-
 const inicio = new ConfigMapa();
-inicio.visualizar_antAeropuerto();
+inicio.crearSimulacionPuntosAntAeropuerto(15000, 500)
+inicio.visualizarAntAeropuerto();
+
