@@ -695,7 +695,7 @@ class Ui_objeto_inicial(object):
         self.sw_tarjetas_datos = QStackedWidget(objeto_inicial)
         self.sw_tarjetas_datos.setObjectName(u"sw_tarjetas_datos")
         self.sw_tarjetas_datos.setEnabled(True)
-        self.sw_tarjetas_datos.setGeometry(QRect(0, 0, 1280, 720))
+        self.sw_tarjetas_datos.setGeometry(QRect(100, 0, 1280, 720))
         self.sw_tarjetas_datos.setMinimumSize(QSize(1280, 0))
         self.sw_tarjetas_datos.setStyleSheet(u"background: transparent;")
         self.ingresar_datos = QWidget()
@@ -703,7 +703,7 @@ class Ui_objeto_inicial(object):
         self.ingresar_datos.setStyleSheet(u"background:transparent;")
         self.f_frame_ingresar_datos = QFrame(self.ingresar_datos)
         self.f_frame_ingresar_datos.setObjectName(u"f_frame_ingresar_datos")
-        self.f_frame_ingresar_datos.setGeometry(QRect(100, 170, 371, 531))
+        self.f_frame_ingresar_datos.setGeometry(QRect(0, 170, 371, 531))
         self.f_frame_ingresar_datos.setMinimumSize(QSize(371, 531))
         self.f_frame_ingresar_datos.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0511364 rgba(29, 53, 65, 255), stop:1 rgba(16, 40, 52, 255));\n"
 "border: 1px solid rgba(162, 170, 173, 100);\n"
@@ -1083,7 +1083,7 @@ class Ui_objeto_inicial(object):
 
         self.f_previzualizar_mapa = QFrame(self.ingresar_datos)
         self.f_previzualizar_mapa.setObjectName(u"f_previzualizar_mapa")
-        self.f_previzualizar_mapa.setGeometry(QRect(480, 170, 300, 230))
+        self.f_previzualizar_mapa.setGeometry(QRect(380, 170, 300, 230))
         self.f_previzualizar_mapa.setMinimumSize(QSize(300, 230))
         self.f_previzualizar_mapa.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0511364 rgba(29, 53, 65, 255), stop:1 rgba(16, 40, 52, 255));\n"
 "border-radius: 16px")
@@ -1095,8 +1095,6 @@ class Ui_objeto_inicial(object):
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.sw_tarjetas_datos.addWidget(self.page_2)
-        self.sw_tarjetas_datos.raise_()
-        self.f_frame_principal.raise_()
 
         self.retranslateUi(objeto_inicial)
 

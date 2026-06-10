@@ -1239,7 +1239,7 @@ border-radius: 16px;</string>
    </property>
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>100</x>
      <y>0</y>
      <width>1280</width>
      <height>720</height>
@@ -1264,7 +1264,7 @@ border-radius: 16px;</string>
     <widget class="QFrame" name="f_frame_ingresar_datos">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>0</x>
        <y>170</y>
        <width>371</width>
        <height>531</height>
@@ -2099,7 +2099,7 @@ border:none;</string>
     <widget class="QFrame" name="f_previzualizar_mapa">
      <property name="geometry">
       <rect>
-       <x>480</x>
+       <x>380</x>
        <y>170</y>
        <width>300</width>
        <height>230</height>
@@ -2126,8 +2126,6 @@ border-radius: 16px</string>
    </widget>
    <widget class="QWidget" name="page_2"/>
   </widget>
-  <zorder>sw_tarjetas_datos</zorder>
-  <zorder>f_frame_principal</zorder>
  </widget>
  <resources>
   <include location="imagenes.qrc"/>
