@@ -8,4 +8,7 @@
     <file>Historial.svg</file>
     <file>Logo SimcoreV2.svg</file>
   </qresource>
+  <qresource prefix="fonts">
+    <file>C:/Users/udieg/Downloads/Inter-VariableFont_opsz,wght.ttf</file>
+  </qresource>
 </RCC>
