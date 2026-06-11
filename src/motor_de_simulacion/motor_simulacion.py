@@ -3,9 +3,9 @@ Clase que se encarga de cargar e iniciar
 la simulacion
 """
 
-from seir_sei.seir import Seir, DatosSimulacionHumanos
-from seir_sei.sei import Sei, DatosSimulacionVector
-from seir_sei.euler import Euler
+from .seir_sei.seir import Seir, DatosSimulacionHumanos
+from .seir_sei.sei import Sei, DatosSimulacionVector
+from .seir_sei.euler import Euler
 
 
 class Motor:
@@ -76,7 +76,7 @@ class Motor:
             1.2 * dia_en_ciclo / (lapso_t_bombeo_agua - 1)
         )
 
-    def iniciar_simulacion(self):
+    def iniciar_simulacion(self) -> bool:
         """
         Funcion que da inicio a la simulacion
         con los datos ingresados.
@@ -100,3 +100,4 @@ class Motor:
                 and self.modelo_sei.expuestos < 1
             ):
                 break
+        return True
