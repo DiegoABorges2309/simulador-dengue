@@ -1,37 +1,35 @@
-import { FeatureCollection, MultiPolygon } from "geojson";
+import { FeatureCollection } from "geojson";
 import * as turf from "@turf/turf";
-import { Polygon } from "leaflet";
+import { Polygon, MultiPolygon } from "geojson";
 
 export class CoordenadasAleatorias {
-  public coordenadas: number[][] = [];
-
-  constructor() {}
-
   public generarCoordenadas(
     geoJsonMapa: FeatureCollection,
     cantidadDeCoordenadas: number,
-  ) {
-    var linea = geoJsonMapa.features[0];
-    var poligono: Polygon | MultiPolygon = turf.lineToPolygon(linea as any);
+  ): [number, number][] {
+    const linea = geoJsonMapa.features[0];
+    const poligono: Polygon | MultiPolygon = turf.lineToPolygon(linea as any);
+    const bbox = geoJsonMapa.features[0].bbox!;
+    const coordenadas: [number, number][] = [];
 
-    var bbox = geoJsonMapa.features[0].bbox!;
-    var puntosValidos = 0;
-    var intentos = 0;
+    let puntosValidos = 0;
+    let intentos = 0;
     while (
       puntosValidos < cantidadDeCoordenadas &&
-      intentos < cantidadDeCoordenadas * 10
+      intentos < cantidadDeCoordenadas * 20
     ) {
-      intentos++;
-
-      var puntoAleatorio = turf.randomPoint(1, { bbox: bbox });
-      var punto = puntoAleatorio.features[0];
+      intentos += 1;
+      const puntoAleatorio = turf.randomPoint(1, { bbox });
+      const punto = puntoAleatorio.features[0];
 
       if (turf.booleanPointInPolygon(punto, poligono)) {
-        var lat = punto.geometry.coordinates[1];
-        var lng = punto.geometry.coordinates[0];
-        this.coordenadas.push([lat, lng]);
+        const lat = punto.geometry.coordinates[1];
+        const lng = punto.geometry.coordinates[0];
+        coordenadas.push([lat, lng]);
+        puntosValidos += 1;
       }
     }
-    return this.coordenadas;
+
+    return coordenadas;
   }
 }
