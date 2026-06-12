@@ -19,6 +19,8 @@ export interface SimulacionBridge {
   centrarMapa(lat: number, lng: number, zoom?: number): void;
   cambiarColores(coloresPorEstado: Record<string, string>): void;
   actualizarEstados(datos: ConteoDia): void;
+  iniciarSimulacionAleatoria(intervaloMs?: number): void;
+  detenerSimulacionAleatoria(): void;
   visualizarPuntoFijo(): void;
   visualizarAntAeropuerto(): void;
 }
@@ -49,11 +51,14 @@ export class ConfigMapa {
 class ControladorSimulacion implements SimulacionBridge {
   private configMapa = new ConfigMapa();
   private simulacionPuntos: SimulacionDePuntos | null = null;
+  private datosSimulacionActual: ConteoDia = {};
+  private simulacionAleatoriaTimer: number | null = null;
 
   public crearSimulacionPuntosAntAeropuerto(
     datosIniciales: ConteoDia,
     maxVisualPoints = 3000,
   ) {
+    this.datosSimulacionActual = { ...datosIniciales };
     this.configMapa.visualizarAntAeropuerto();
     this.simulacionPuntos = new SimulacionDePuntos(
       GEOJSON.ANTAEROPUERTO,
@@ -117,6 +122,75 @@ class ControladorSimulacion implements SimulacionBridge {
     this.simulacionPuntos.actualizarColores(mapeo);
   }
 
+  public iniciarSimulacionAleatoria(intervaloMs = 1000) {
+    if (!this.simulacionPuntos) {
+      return;
+    }
+
+    this.detenerSimulacionAleatoria();
+
+    this.simulacionAleatoriaTimer = window.setInterval(() => {
+      if (!this.simulacionPuntos) {
+        return;
+      }
+
+      this.datosSimulacionActual = this.generarConteoAleatorio(
+        this.datosSimulacionActual,
+      );
+
+      this.simulacionPuntos.actualizarDia(this.datosSimulacionActual);
+    }, intervaloMs);
+  }
+
+  public detenerSimulacionAleatoria() {
+    if (this.simulacionAleatoriaTimer !== null) {
+      window.clearInterval(this.simulacionAleatoriaTimer);
+      this.simulacionAleatoriaTimer = null;
+    }
+  }
+
+  private generarConteoAleatorio(datos: ConteoDia): ConteoDia {
+    const totalReal = this.calcularTotalReal(datos);
+    if (totalReal <= 0) {
+      return datos;
+    }
+
+    const disponibles = totalReal;
+    const susceptibles = Math.max(
+      0,
+      Math.round(Math.random() * disponibles),
+    );
+    const infectados = Math.max(
+      0,
+      Math.round(Math.random() * (disponibles - susceptibles)),
+    );
+    const recuperados = Math.max(
+      0,
+      Math.round(
+        Math.random() * (disponibles - susceptibles - infectados),
+      ),
+    );
+    const expuestos = Math.max(
+      0,
+      Math.round(
+        Math.random() *
+          (disponibles - susceptibles - infectados - recuperados),
+      ),
+    );
+    const muertos = Math.max(
+      0,
+      disponibles - susceptibles - infectados - recuperados - expuestos,
+    );
+
+    return {
+      susceptibles,
+      infectados,
+      recuperados,
+      expuestos,
+      muertos,
+    };
+  }
+
   public visualizarPuntoFijo() {
     this.configMapa.visualizarPuntoFijo();
   }
@@ -139,4 +213,17 @@ class ControladorSimulacion implements SimulacionBridge {
 const inicio = new ControladorSimulacion();
 window.bridge = inicio;
 window.SimulacionControl = inicio;
+
+// Iniciar simulación al cargar el mapa con datos de ejemplo.
+inicio.crearSimulacionPuntosAntAeropuerto(
+  {
+    susceptibles: 14000,
+    infectados: 1000,
+    recuperados: 0,
+    expuestos: 0,
+    muertos: 0,
+  },
+  3000,
+);
+inicio.iniciarSimulacionAleatoria(1000);
 
