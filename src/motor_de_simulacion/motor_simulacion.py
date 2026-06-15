@@ -76,7 +76,7 @@ class Motor:
             1.2 * dia_en_ciclo / (lapso_t_bombeo_agua - 1)
         )
 
-    def iniciar_simulacion(self) -> bool:
+    def iniciar_simulacion(self) -> list:
         """
         Funcion que da inicio a la simulacion
         con los datos ingresados.
@@ -100,4 +100,4 @@ class Motor:
                 and self.modelo_sei.expuestos < 1
             ):
                 break
-        return True
+        return self.lista_de_dias

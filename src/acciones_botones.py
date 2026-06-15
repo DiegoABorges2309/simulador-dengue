@@ -49,8 +49,10 @@ class AccionesBotones:
             datos_simulacion[2],
             datos_vectores,
         )
-
-        if engine.iniciar_simulacion():
+        hola = engine.iniciar_simulacion()
+        if hola:
             self.ui.sw_panel_derecho.setCurrentIndex(1)
+            print(hola)
+            
             return True
         return False
