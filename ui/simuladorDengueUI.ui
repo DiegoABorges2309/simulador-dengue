@@ -38,7 +38,8 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(16, 40, 52);</string>
+    <string notr="true">background-color: rgb(232, 236, 239);
+</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Shape::StyledPanel</enum>
@@ -83,8 +84,8 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(59, 88, 102);
-border-radius: 22px;
+       <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 16px;
 </string>
       </property>
       <property name="frameShape">
@@ -115,8 +116,9 @@ border-radius: 22px;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">border-image: url(:/svg/Logo SimcoreV2.svg);
-border-radius: 14px;</string>
+          <string notr="true">image: url(:/svg/Base Logo.svg);
+border-radius: 10px;
+border: 1px solid rgba(32, 59, 73, 20);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::Shape::StyledPanel</enum>
@@ -167,11 +169,14 @@ border-radius: 14px;</string>
          </property>
          <property name="styleSheet">
           <string notr="true">QPushButton{
-	border-image: url(:/svg/Boton Nueva Simulacion.svg);
-	border-radius: 14px;
+	
+	image: url(:/svg/Boton Nueva Simulacion.svg);
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(232, 235, 235, 255), stop:1 rgba(253, 254, 254, 255));
+	border-radius: 16px;
+	border: 1px solid rgba(32, 59, 73, 20);
 }
 QPushButton::pressed{
-	background-color: rgb(29, 53, 65);
+	background-color: rgba(29, 53, 65, 100);
 }</string>
          </property>
          <property name="text">
@@ -190,11 +195,13 @@ QPushButton::pressed{
          <property name="styleSheet">
           <string notr="true">
 QPushButton{
-	border-image: url(:/svg/Historial.svg);
-	border-radius: 14px;
+	image: url(:/svg/Historial.svg);
+		background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(232, 235, 235, 255), stop:1 rgba(253, 254, 254, 255));
+	border-radius: 16px;
+	border: 1px solid rgba(32, 59, 73, 20);
 }
 QPushButton::pressed{
-	background-color: rgb(29, 53, 65);
+	background-color: rgba(29, 53, 65, 100);
 }</string>
          </property>
          <property name="text">
@@ -267,17 +274,16 @@ QPushButton::pressed{
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">background:none;
-</string>
+       <string notr="true">background:transparent;</string>
       </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <widget class="QWidget" name="panel_inicial">
        <property name="styleSheet">
-        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0511364 rgba(29, 53, 65, 255), stop:0.954545 rgba(16, 40, 52, 255));
-border-radius: 32px;
-border: 1px solid rgb(162, 170, 173);</string>
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(232, 235, 235, 255), stop:1 rgba(253, 254, 254, 255));
+border-radius: 16px;
+border: 0px;</string>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
@@ -323,7 +329,7 @@ border: 0px;</string>
               </sizepolicy>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(32, 59, 73);
+              <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 16px;</string>
              </property>
              <property name="frameShape">
@@ -337,7 +343,7 @@ border-radius: 16px;</string>
                <widget class="QLabel" name="label_2">
                 <property name="font">
                  <font>
-                  <family>Consolas</family>
+                  <family>Inter</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
@@ -370,7 +376,7 @@ border: 1px solid rgba(162, 170, 173, 100);</string>
               </sizepolicy>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(32, 59, 73);
+              <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 16px;</string>
              </property>
              <property name="frameShape">
@@ -384,7 +390,7 @@ border-radius: 16px;</string>
                <widget class="QLabel" name="label_3">
                 <property name="font">
                  <font>
-                  <family>Consolas</family>
+                  <family>Inter</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
@@ -417,7 +423,7 @@ border: 1px solid rgba(162, 170, 173, 100);</string>
               </sizepolicy>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgba(14, 25, 31, 100);
+              <string notr="true">background-color: rgb(215, 219, 222);
 border-radius: 16px;</string>
              </property>
              <property name="frameShape">
@@ -431,7 +437,7 @@ border-radius: 16px;</string>
                <widget class="QLabel" name="label_4">
                 <property name="font">
                  <font>
-                  <family>Consolas</family>
+                  <family>Inter</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
@@ -482,7 +488,7 @@ border-radius:0px;</string>
             <widget class="QLabel" name="label">
              <property name="font">
               <font>
-               <family>Consolas</family>
+               <family>Inter</family>
                <pointsize>14</pointsize>
               </font>
              </property>
@@ -495,7 +501,7 @@ border-radius:0px;</string>
              <property name="styleSheet">
               <string notr="true">background: none;
 image: url(:/svg/Subtract (1).svg);
-color: rgb(208, 212, 228);
+color: rgb(218, 221, 221);
 border: 0px;</string>
              </property>
              <property name="text">
@@ -550,7 +556,7 @@ border: 0px;
               </sizepolicy>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(32, 59, 73);
+              <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 16px;</string>
              </property>
              <property name="frameShape">
@@ -564,7 +570,7 @@ border-radius: 16px;</string>
                <widget class="QLabel" name="label_5">
                 <property name="font">
                  <font>
-                  <family>Consolas</family>
+                  <family>Inter</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
@@ -597,7 +603,7 @@ border: 1px solid rgba(162, 170, 173, 100);</string>
               </sizepolicy>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(32, 59, 73);
+              <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 16px;</string>
              </property>
              <property name="frameShape">
@@ -611,7 +617,7 @@ border-radius: 16px;</string>
                <widget class="QLabel" name="label_6">
                 <property name="font">
                  <font>
-                  <family>Consolas</family>
+                  <family>Inter</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
@@ -644,7 +650,7 @@ border: 1px solid rgba(162, 170, 173, 100);</string>
               </sizepolicy>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(32, 59, 73);
+              <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 16px;</string>
              </property>
              <property name="frameShape">
@@ -658,7 +664,7 @@ border-radius: 16px;</string>
                <widget class="QLabel" name="label_7">
                 <property name="font">
                  <font>
-                  <family>Consolas</family>
+                  <family>Inter</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
@@ -691,7 +697,7 @@ border: 1px solid rgba(162, 170, 173, 100);</string>
               </sizepolicy>
              </property>
              <property name="styleSheet">
-              <string notr="true">background-color: rgb(32, 59, 73);
+              <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 16px;</string>
              </property>
              <property name="frameShape">
@@ -705,7 +711,7 @@ border-radius: 16px;</string>
                <widget class="QLabel" name="label_8">
                 <property name="font">
                  <font>
-                  <family>Consolas</family>
+                  <family>Inter</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
@@ -1265,9 +1271,9 @@ border-radius: 16px;</string>
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>170</y>
-       <width>371</width>
-       <height>531</height>
+       <y>10</y>
+       <width>511</width>
+       <height>691</height>
       </rect>
      </property>
      <property name="minimumSize">
@@ -1277,8 +1283,8 @@ border-radius: 16px;</string>
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0511364 rgba(29, 53, 65, 255), stop:1 rgba(16, 40, 52, 255));
-border: 1px solid rgba(162, 170, 173, 100);
+      <string notr="true">background-color: rgb(255, 255, 255);
+border: 1px solid rgba(32, 59, 73, 20);
 border-radius: 16px;
 color: rgb(208, 212, 228);</string>
      </property>
@@ -1293,16 +1299,16 @@ color: rgb(208, 212, 228);</string>
        <number>10</number>
       </property>
       <property name="leftMargin">
-       <number>12</number>
+       <number>15</number>
       </property>
       <property name="topMargin">
-       <number>12</number>
+       <number>15</number>
       </property>
       <property name="rightMargin">
-       <number>12</number>
+       <number>15</number>
       </property>
       <property name="bottomMargin">
-       <number>12</number>
+       <number>15</number>
       </property>
       <item>
        <widget class="QLabel" name="label_9">
@@ -2095,33 +2101,6 @@ border:none;</string>
        </widget>
       </item>
      </layout>
-    </widget>
-    <widget class="QFrame" name="f_previzualizar_mapa">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>170</y>
-       <width>300</width>
-       <height>230</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>300</width>
-       <height>230</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0.0511364 rgba(29, 53, 65, 255), stop:1 rgba(16, 40, 52, 255));
-border-radius: 16px</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Shape::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Shadow::Raised</enum>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_9"/>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2"/>
