@@ -1,5 +1,14 @@
 <RCC>
   <qresource prefix="svg">
+    <file>time.svg</file>
+    <file>calendario.svg</file>
+    <file>bio.svg</file>
+    <file>infectado.svg</file>
+    <file>muerte.svg</file>
+    <file>retrasar.svg</file>
+    <file>adelantar.svg</file>
+    <file>pausa.svg</file>
+    <file>play.svg</file>
     <file>humano.svg</file>
     <file>simulacion.svg</file>
     <file>biohazard.svg</file>
