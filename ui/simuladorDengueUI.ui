@@ -815,7 +815,7 @@ border-radius: 16px;</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_10">
               <item row="0" column="0">
-               <widget class="QFrame" name="f_grafica_humanos_4">
+               <widget class="QFrame" name="f_grafica_general_humano">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -859,7 +859,7 @@ border-radius: 16px;</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_11">
               <item row="0" column="0">
-               <widget class="QFrame" name="f_grafica_total_humanos_4">
+               <widget class="QFrame" name="f_grafica_sistema_bombeo">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -1043,7 +1043,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_24">
+                  <widget class="QLabel" name="l_ritmo_contagio_general">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -1182,7 +1182,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_28">
+                  <widget class="QLabel" name="l_poblacion_humana_total">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -1321,7 +1321,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_34">
+                  <widget class="QLabel" name="l_cantidad_muertos">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -1460,7 +1460,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_39">
+                  <widget class="QLabel" name="l_infectados_acumulados">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -1666,7 +1666,7 @@ border:none;</string>
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QPushButton" name="pb_boton_iniciar_simulacion_3">
+                     <widget class="QPushButton" name="pb_retrasar">
                       <property name="minimumSize">
                        <size>
                         <width>32</width>
@@ -1697,7 +1697,7 @@ QPushButton::pressed{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="pb_boton_historial_simulacion_3">
+                     <widget class="QPushButton" name="pb_pausa">
                       <property name="minimumSize">
                        <size>
                         <width>32</width>
@@ -1839,7 +1839,7 @@ image:none;</string>
                    </property>
                    <layout class="QHBoxLayout" name="horizontalLayout_19">
                     <item>
-                     <widget class="QPushButton" name="pb_boton_iniciar_simulacion_4">
+                     <widget class="QPushButton" name="pb_play">
                       <property name="minimumSize">
                        <size>
                         <width>32</width>
@@ -1869,7 +1869,7 @@ QPushButton::pressed{
                      </widget>
                     </item>
                     <item>
-                     <widget class="QPushButton" name="pb_boton_historial_simulacion_4">
+                     <widget class="QPushButton" name="pb_adelantar">
                       <property name="minimumSize">
                        <size>
                         <width>32</width>
@@ -2051,7 +2051,7 @@ border-radius:10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">border:0px;
-image: url(:/svg/humano.svg);
+image: none;
 border-radius:0px;
 background-color: none;</string>
                          </property>
@@ -2148,7 +2148,7 @@ border-radius:10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">border:0px;
-image: url(:/svg/humano.svg);
+image: none;
 border-radius:0px;
 background-color: none;</string>
                          </property>
@@ -2245,7 +2245,7 @@ border-radius:10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">border:0px;
-image: url(:/svg/humano.svg);
+image: none;
 border-radius:0px;
 background-color: none;</string>
                          </property>
@@ -2342,7 +2342,7 @@ border-radius:10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">border:0px;
-image: url(:/svg/humano.svg);
+image: none;
 border-radius:0px;
 background-color: none;</string>
                          </property>
@@ -2425,7 +2425,7 @@ color: rgb(150, 161, 168);
                      <number>9</number>
                     </property>
                     <item>
-                     <widget class="QLabel" name="label_23">
+                     <widget class="QLabel" name="l_susceptibles_h">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -2468,7 +2468,7 @@ color: rgba(44, 65, 76, 150);
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_29">
+                     <widget class="QLabel" name="l_expuestos_h">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -2511,7 +2511,7 @@ color: rgba(44, 65, 76, 150);
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_27">
+                     <widget class="QLabel" name="l_infectados_h">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -2554,7 +2554,7 @@ color: rgba(44, 65, 76, 150);
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_25">
+                     <widget class="QLabel" name="l_recuperados">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -2665,7 +2665,7 @@ border-radius:10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">border:0px;
-image: url(:/svg/Boton Nueva Simulacion.svg);
+image: none;
 border-radius:0px;
 background-color: none;</string>
                          </property>
@@ -2761,7 +2761,7 @@ border-radius:10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">border:0px;
-image: url(:/svg/Boton Nueva Simulacion.svg);
+image: none;
 border-radius:0px;
 background-color: none;</string>
                          </property>
@@ -2857,7 +2857,7 @@ border-radius:10px;</string>
                          </property>
                          <property name="styleSheet">
                           <string notr="true">border:0px;
-image: url(:/svg/Boton Nueva Simulacion.svg);
+image: none;
 border-radius:0px;
 background-color: none;</string>
                          </property>
@@ -2939,7 +2939,7 @@ color: rgb(150, 161, 168);</string>
                      <number>9</number>
                     </property>
                     <item>
-                     <widget class="QLabel" name="label_36">
+                     <widget class="QLabel" name="l_susceptibles_m">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -2982,7 +2982,7 @@ color: rgba(44, 65, 76, 150);
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_37">
+                     <widget class="QLabel" name="l_expuestos_m">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -3025,7 +3025,7 @@ color: rgba(44, 65, 76, 150);
                      </widget>
                     </item>
                     <item>
-                     <widget class="QLabel" name="label_38">
+                     <widget class="QLabel" name="l_infectados_m">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                         <horstretch>0</horstretch>
@@ -3134,7 +3134,7 @@ border-radius: 16px;</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_16">
               <item row="0" column="0">
-               <widget class="QFrame" name="f_grafica_total_mosquitos_4">
+               <widget class="QFrame" name="f_grafica_general_mosquito">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -3178,7 +3178,7 @@ border-radius: 16px;</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_15">
               <item row="0" column="0">
-               <widget class="QFrame" name="f_grafica_expuestos_4">
+               <widget class="QFrame" name="f_grafica_cantidad_mosquitos">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -3362,7 +3362,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_57">
+                  <widget class="QLabel" name="l_tasa_trans_m_h">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -3501,7 +3501,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_59">
+                  <widget class="QLabel" name="l_tasa_trans_h_m">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -3640,7 +3640,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_61">
+                  <widget class="QLabel" name="l_tiempo_recuperacion">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -3779,7 +3779,7 @@ color: rgb(150, 161, 168);
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="label_63">
+                  <widget class="QLabel" name="l_tiempo_incubacion">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
