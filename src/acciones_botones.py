@@ -1,5 +1,6 @@
 from diseño_py.simuladorDengueUI import Ui_objeto_inicial
 from recolectar_datos import RecolectarDatos
+from acciones_tarjetas import AccionesTarjetas
 from motor_de_simulacion.motor_simulacion import (
     Motor,
     DatosSimulacionHumanos,
@@ -11,12 +12,12 @@ class AccionesBotones:
     def __init__(self, ui: Ui_objeto_inicial):
         self.presiono_boton_iniciar_simulacion = False
         self.ui = ui
+        self.acciones_tarjetas = AccionesTarjetas(self.ui)
 
     def nueva_simulacion(self):
         if not self.presiono_boton_iniciar_simulacion:
             self.presiono_boton_iniciar_simulacion = True
             self.ui.sw_tarjetas_datos.show()
-            self.ui.f_previzualizar_mapa.hide()
         else:
             self.presiono_boton_iniciar_simulacion = False
             self.ui.sw_tarjetas_datos.hide()
@@ -53,6 +54,6 @@ class AccionesBotones:
         if hola:
             self.ui.sw_panel_derecho.setCurrentIndex(1)
             print(hola)
-            
+
             return True
         return False
