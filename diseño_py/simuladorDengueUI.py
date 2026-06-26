@@ -87,10 +87,10 @@ class Ui_objeto_inicial(object):
 
         self.verticalLayout.addWidget(self.frame_3)
 
-        self.pb_boton_iniciar_simulacion = QPushButton(self.f_panel_izquierdo)
-        self.pb_boton_iniciar_simulacion.setObjectName(u"pb_boton_iniciar_simulacion")
-        self.pb_boton_iniciar_simulacion.setMinimumSize(QSize(52, 52))
-        self.pb_boton_iniciar_simulacion.setStyleSheet(u"QPushButton{\n"
+        self.pb_boton_nueva_simulacion = QPushButton(self.f_panel_izquierdo)
+        self.pb_boton_nueva_simulacion.setObjectName(u"pb_boton_nueva_simulacion")
+        self.pb_boton_nueva_simulacion.setMinimumSize(QSize(52, 52))
+        self.pb_boton_nueva_simulacion.setStyleSheet(u"QPushButton{\n"
 "	\n"
 "	image: url(:/svg/Boton Nueva Simulacion.svg);\n"
 "	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(232, 235, 235, 255), stop:1 rgba(253, 254, 254, 255));\n"
@@ -101,7 +101,7 @@ class Ui_objeto_inicial(object):
 "	background-color: rgba(29, 53, 65, 100);\n"
 "}")
 
-        self.verticalLayout.addWidget(self.pb_boton_iniciar_simulacion)
+        self.verticalLayout.addWidget(self.pb_boton_nueva_simulacion)
 
         self.pb_boton_historial_simulacion = QPushButton(self.f_panel_izquierdo)
         self.pb_boton_historial_simulacion.setObjectName(u"pb_boton_historial_simulacion")
@@ -134,10 +134,10 @@ class Ui_objeto_inicial(object):
 
         self.verticalLayout.addWidget(self.frame_2)
 
-        self.pb_boton_nueva_simulacion = QPushButton(self.f_panel_izquierdo)
-        self.pb_boton_nueva_simulacion.setObjectName(u"pb_boton_nueva_simulacion")
-        self.pb_boton_nueva_simulacion.setMinimumSize(QSize(52, 52))
-        self.pb_boton_nueva_simulacion.setStyleSheet(u"QPushButton{\n"
+        self.pb_boton_iniciar_simulacion = QPushButton(self.f_panel_izquierdo)
+        self.pb_boton_iniciar_simulacion.setObjectName(u"pb_boton_iniciar_simulacion")
+        self.pb_boton_iniciar_simulacion.setMinimumSize(QSize(52, 52))
+        self.pb_boton_iniciar_simulacion.setStyleSheet(u"QPushButton{\n"
 "	image: url(:/svg/Base boton 'Inicio'.svg);\n"
 "	background-color: rgb(28, 51, 63);\n"
 "	border-radius: 14px;\n"
@@ -146,7 +146,7 @@ class Ui_objeto_inicial(object):
 "	background-color: rgb(29, 53, 65);\n"
 "}")
 
-        self.verticalLayout.addWidget(self.pb_boton_nueva_simulacion)
+        self.verticalLayout.addWidget(self.pb_boton_iniciar_simulacion)
 
 
         self.horizontalLayout.addWidget(self.f_panel_izquierdo)
@@ -2426,12 +2426,10 @@ class Ui_objeto_inicial(object):
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.sw_tarjetas_datos.addWidget(self.page_2)
-        self.sw_tarjetas_datos.raise_()
-        self.f_frame_principal.raise_()
 
         self.retranslateUi(objeto_inicial)
 
-        self.sw_panel_derecho.setCurrentIndex(1)
+        self.sw_panel_derecho.setCurrentIndex(0)
         self.sw_tarjetas_datos.setCurrentIndex(0)
 
 
@@ -2440,9 +2438,9 @@ class Ui_objeto_inicial(object):
 
     def retranslateUi(self, objeto_inicial):
         objeto_inicial.setWindowTitle(QCoreApplication.translate("objeto_inicial", u"Form", None))
-        self.pb_boton_iniciar_simulacion.setText("")
-        self.pb_boton_historial_simulacion.setText("")
         self.pb_boton_nueva_simulacion.setText("")
+        self.pb_boton_historial_simulacion.setText("")
+        self.pb_boton_iniciar_simulacion.setText("")
         self.label_2.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p align=\"center\">Sin datos que vizualizar</p></body></html>", None))
         self.label_3.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p align=\"center\">Sin datos que vizualizar</p></body></html>", None))
         self.label_4.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p align=\"center\">Sin datos que vizualizar</p></body></html>", None))

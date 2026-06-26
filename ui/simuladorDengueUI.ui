@@ -160,7 +160,7 @@ border: 1px solid rgba(32, 59, 73, 15);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pb_boton_iniciar_simulacion">
+        <widget class="QPushButton" name="pb_boton_nueva_simulacion">
          <property name="minimumSize">
           <size>
            <width>52</width>
@@ -241,7 +241,7 @@ QPushButton::pressed{
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pb_boton_nueva_simulacion">
+        <widget class="QPushButton" name="pb_boton_iniciar_simulacion">
          <property name="minimumSize">
           <size>
            <width>52</width>
@@ -278,7 +278,7 @@ QPushButton::pressed{
        <string notr="true">background:transparent;</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="panel_inicial">
        <property name="styleSheet">
@@ -5108,8 +5108,6 @@ border: 1px solid rgba(32, 59, 73, 15);</string>
    </widget>
    <widget class="QWidget" name="page_2"/>
   </widget>
-  <zorder>sw_tarjetas_datos</zorder>
-  <zorder>f_frame_principal</zorder>
  </widget>
  <resources>
   <include location="imagenes.qrc"/>
