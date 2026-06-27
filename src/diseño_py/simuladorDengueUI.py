@@ -1854,7 +1854,7 @@ class Ui_objeto_inicial(object):
         self.ingresar_datos.setStyleSheet(u"background:transparent;")
         self.f_frame_ingresar_datos = QFrame(self.ingresar_datos)
         self.f_frame_ingresar_datos.setObjectName(u"f_frame_ingresar_datos")
-        self.f_frame_ingresar_datos.setGeometry(QRect(0, 10, 371, 715))
+        self.f_frame_ingresar_datos.setGeometry(QRect(0, 10, 371, 713))
         self.f_frame_ingresar_datos.setMinimumSize(QSize(371, 531))
         self.f_frame_ingresar_datos.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border: 1px solid rgba(32, 59, 73, 20);\n"
@@ -2211,7 +2211,7 @@ class Ui_objeto_inicial(object):
         self.cb_lugar.setSizePolicy(sizePolicy17)
         self.cb_lugar.setMinimumSize(QSize(0, 34))
         self.cb_lugar.setMaximumSize(QSize(250, 16777215))
-        self.cb_lugar.setFont(font2)
+        self.cb_lugar.setFont(font)
         self.cb_lugar.setStyleSheet(u"background-color: rgba(240, 244, 247, 125);\n"
 "border-radius: 8px;\n"
 "padding-left: 10px;\n"
@@ -2251,15 +2251,16 @@ class Ui_objeto_inicial(object):
         self.frame_14.setFrameShadow(QFrame.Shadow.Raised)
         self.horizontalLayout_8 = QHBoxLayout(self.frame_14)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.horizontalLayout_8.setContentsMargins(2, 2, 2, 2)
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
         self.cb_duracion_simulacion = QComboBox(self.frame_14)
         self.cb_duracion_simulacion.addItem("")
         self.cb_duracion_simulacion.addItem("")
         self.cb_duracion_simulacion.setObjectName(u"cb_duracion_simulacion")
         sizePolicy17.setHeightForWidth(self.cb_duracion_simulacion.sizePolicy().hasHeightForWidth())
         self.cb_duracion_simulacion.setSizePolicy(sizePolicy17)
-        self.cb_duracion_simulacion.setMaximumSize(QSize(165, 16777215))
-        self.cb_duracion_simulacion.setFont(font2)
+        self.cb_duracion_simulacion.setMinimumSize(QSize(0, 34))
+        self.cb_duracion_simulacion.setMaximumSize(QSize(165, 34))
+        self.cb_duracion_simulacion.setFont(font)
         self.cb_duracion_simulacion.setStyleSheet(u"border-radius: 5px;\n"
 "background-color: rgba(240, 244, 247, 125);\n"
 "border-radius: 8px;\n"
@@ -2268,7 +2269,19 @@ class Ui_objeto_inicial(object):
 
         self.horizontalLayout_8.addWidget(self.cb_duracion_simulacion)
 
-        self.sb_duracion_dias = QSpinBox(self.frame_14)
+        self.frame_10 = QFrame(self.frame_14)
+        self.frame_10.setObjectName(u"frame_10")
+        sizePolicy19 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy19.setHorizontalStretch(0)
+        sizePolicy19.setVerticalStretch(0)
+        sizePolicy19.setHeightForWidth(self.frame_10.sizePolicy().hasHeightForWidth())
+        self.frame_10.setSizePolicy(sizePolicy19)
+        self.frame_10.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_10.setFrameShadow(QFrame.Shadow.Raised)
+        self.gridLayout_14 = QGridLayout(self.frame_10)
+        self.gridLayout_14.setObjectName(u"gridLayout_14")
+        self.gridLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.sb_duracion_dias = QSpinBox(self.frame_10)
         self.sb_duracion_dias.setObjectName(u"sb_duracion_dias")
         sizePolicy18.setHeightForWidth(self.sb_duracion_dias.sizePolicy().hasHeightForWidth())
         self.sb_duracion_dias.setSizePolicy(sizePolicy18)
@@ -2282,7 +2295,10 @@ class Ui_objeto_inicial(object):
 "border: 1px solid rgba(32, 59, 73, 15);")
         self.sb_duracion_dias.setMaximum(200)
 
-        self.horizontalLayout_8.addWidget(self.sb_duracion_dias)
+        self.gridLayout_14.addWidget(self.sb_duracion_dias, 0, 0, 1, 1)
+
+
+        self.horizontalLayout_8.addWidget(self.frame_10)
 
 
         self.gridLayout_9.addWidget(self.frame_14, 1, 0, 1, 1)
