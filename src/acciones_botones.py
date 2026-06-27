@@ -1,6 +1,7 @@
 from diseño_py.simuladorDengueUI import Ui_objeto_inicial
 from recolectar_datos import RecolectarDatos
-from acciones_tarjetas import AccionesTarjetas
+from acciones_tarjetas import AccionesBotonesTarjetas
+from acciones_simulacion import AccionesSimulacion
 from motor_de_simulacion.motor_simulacion import (
     Motor,
     DatosSimulacionHumanos,
@@ -12,7 +13,8 @@ class AccionesBotones:
     def __init__(self, ui: Ui_objeto_inicial):
         self.presiono_boton_iniciar_simulacion = False
         self.ui = ui
-        self.acciones_tarjetas = AccionesTarjetas(self.ui)
+        self.acciones_tarjetas = AccionesBotonesTarjetas(self.ui)
+        self.acciones_simulacion = AccionesSimulacion(self.ui)
 
     def nueva_simulacion(self):
         if not self.presiono_boton_iniciar_simulacion:
