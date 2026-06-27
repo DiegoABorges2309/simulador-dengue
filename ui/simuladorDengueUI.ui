@@ -3871,7 +3871,7 @@ padding-right: 20px;
        <x>0</x>
        <y>10</y>
        <width>371</width>
-       <height>715</height>
+       <height>713</height>
       </rect>
      </property>
      <property name="minimumSize">
@@ -4639,7 +4639,7 @@ color: rgb(44, 65, 76);
                  <property name="font">
                   <font>
                    <family>Inter</family>
-                   <pointsize>12</pointsize>
+                   <pointsize>10</pointsize>
                   </font>
                  </property>
                  <property name="styleSheet">
@@ -4718,16 +4718,16 @@ color: rgb(44, 65, 76);
                  </property>
                  <layout class="QHBoxLayout" name="horizontalLayout_8">
                   <property name="leftMargin">
-                   <number>2</number>
+                   <number>0</number>
                   </property>
                   <property name="topMargin">
-                   <number>2</number>
+                   <number>0</number>
                   </property>
                   <property name="rightMargin">
-                   <number>2</number>
+                   <number>0</number>
                   </property>
                   <property name="bottomMargin">
-                   <number>2</number>
+                   <number>0</number>
                   </property>
                   <item>
                    <widget class="QComboBox" name="cb_duracion_simulacion">
@@ -4737,16 +4737,22 @@ color: rgb(44, 65, 76);
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>34</height>
+                     </size>
+                    </property>
                     <property name="maximumSize">
                      <size>
                       <width>165</width>
-                      <height>16777215</height>
+                      <height>34</height>
                      </size>
                     </property>
                     <property name="font">
                      <font>
                       <family>Inter</family>
-                      <pointsize>12</pointsize>
+                      <pointsize>10</pointsize>
                      </font>
                     </property>
                     <property name="styleSheet">
@@ -4769,41 +4775,71 @@ border: 1px solid rgba(32, 59, 73, 15);</string>
                    </widget>
                   </item>
                   <item>
-                   <widget class="QSpinBox" name="sb_duracion_dias">
+                   <widget class="QFrame" name="frame_10">
                     <property name="sizePolicy">
-                     <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                       <horstretch>0</horstretch>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>34</height>
-                     </size>
+                    <property name="frameShape">
+                     <enum>QFrame::Shape::StyledPanel</enum>
                     </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>120</width>
-                      <height>34</height>
-                     </size>
+                    <property name="frameShadow">
+                     <enum>QFrame::Shadow::Raised</enum>
                     </property>
-                    <property name="font">
-                     <font>
-                      <family>Inter</family>
-                      <pointsize>12</pointsize>
-                     </font>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">color: rgb(44, 65, 76);
+                    <layout class="QGridLayout" name="gridLayout_14">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QSpinBox" name="sb_duracion_dias">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>34</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>120</width>
+                         <height>34</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Inter</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">color: rgb(44, 65, 76);
 background-color: rgba(240, 244, 247, 125);
 border-radius: 8px;
 padding-left: 10px;
 border: 1px solid rgba(32, 59, 73, 15);</string>
-                    </property>
-                    <property name="maximum">
-                     <number>200</number>
-                    </property>
+                       </property>
+                       <property name="maximum">
+                        <number>200</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </widget>
                   </item>
                  </layout>
