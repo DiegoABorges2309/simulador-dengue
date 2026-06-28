@@ -1,9 +1,18 @@
 from PySide6.QtWidgets import QComboBox, QSpinBox, QMessageBox
+from diseño_py.simuladorDengueUI import Ui_objeto_inicial
+from PySide6.QtCore import QEvent
 
 
 class RecolectarDatos:
     def __init__(self):
         pass
+
+    @staticmethod
+    def verificar_cambio_datos(widget: QSpinBox) -> bool:
+        if widget.value() == 0:
+            return False
+
+        return True
 
     @staticmethod
     def recolectar_datos(
