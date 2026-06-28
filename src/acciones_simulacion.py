@@ -113,7 +113,7 @@ class AccionesSimulacion:
             self.ui.pb_boton_iniciar_simulacion.setStyleSheet(
                 "QPushButton{\n"
                 "	image: url(:/svg/Base boton 'Inicio'.svg);\n"
-                "	background-color: rgb(28, 51, 63);\n"
+                "	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(29, 53, 65, 255), stop:1 rgba(68, 220, 188, 255));\n"
                 "	border-radius: 14px;\n"
                 "}\n"
                 "QPushButton::pressed{\n"
@@ -122,3 +122,13 @@ class AccionesSimulacion:
             )
         else:
             self.ui.pb_boton_iniciar_simulacion.setEnabled(False)
+            self.ui.pb_boton_iniciar_simulacion.setStyleSheet(
+                "QPushButton{\n"
+                "	image: url(:/svg/Base boton 'Inicio'.svg);\n"
+                "	background-color: rgb(28, 51, 63);\n"
+                "	border-radius: 14px;\n"
+                "}\n"
+                "QPushButton::pressed{\n"
+                "	background-color: rgb(29, 53, 65);\n"
+                "}"
+            )
