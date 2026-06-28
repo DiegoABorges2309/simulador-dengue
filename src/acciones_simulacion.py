@@ -110,5 +110,15 @@ class AccionesSimulacion:
                 lista_de_booleanos.append(spinbox)
         if all(lista_de_booleanos):
             self.ui.pb_boton_iniciar_simulacion.setEnabled(True)
+            self.ui.pb_boton_iniciar_simulacion.setStyleSheet(
+                "QPushButton{\n"
+                "	image: url(:/svg/Base boton 'Inicio'.svg);\n"
+                "	background-color: rgb(28, 51, 63);\n"
+                "	border-radius: 14px;\n"
+                "}\n"
+                "QPushButton::pressed{\n"
+                "	background-color: rgb(29, 53, 65);\n"
+                "}"
+            )
         else:
             self.ui.pb_boton_iniciar_simulacion.setEnabled(False)
