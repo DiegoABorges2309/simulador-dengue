@@ -23,7 +23,7 @@ class AccionesSimulacion:
         self.clase_datos = EstadoSpinBoxes()
         # Aqui se encuentran las función que reune
         # la conección de los botones con las acciones correspondientes:
-        self.establecer_comportamientos_simualacion_iniciales()
+        self.establecer_comportamientos_simulacion_iniciales()
         # Aqui se encuentran las función que reune los comportamientos iniciales:
         self.establecer_funciones_simulacion_botones()
 
@@ -34,7 +34,7 @@ class AccionesSimulacion:
         )
         pass
 
-    def establecer_comportamientos_simualacion_iniciales(self) -> None:
+    def establecer_comportamientos_simulacion_iniciales(self) -> None:
         self.ui.pb_boton_iniciar_simulacion.setEnabled(False)
         self.ui.cb_duracion_simulacion.currentIndexChanged.connect(
             self.mostrar_ocultar_cb_duracion_dias
@@ -85,15 +85,14 @@ class AccionesSimulacion:
     # ================================
 
     def mostrar_ocultar_cb_duracion_dias(self) -> None:
+        self.cambiar_estado_boton_inicio()
         indice_combobox: int = self.ui.cb_duracion_simulacion.currentIndex()
         if indice_combobox == 1:
             self.ui.sb_duracion_dias.show()
-            self.ui.sb_duracion_dias.setValue(1)
-            return None
-
-        self.ui.sb_duracion_dias.hide()
-        self.ui.sb_duracion_dias.setValue(0)
-        return None
+        else:
+            self.ui.sb_duracion_dias.hide()
+        # realizar comprobacion del estado de datos:
+        self.cambiar_estado_boton_inicio()
 
     def cambiar_estado_spinboxes(self, widget: QSpinBox) -> None:
         self.clase_datos.WIDGETS_ESTADOS[widget.objectName()] = (
