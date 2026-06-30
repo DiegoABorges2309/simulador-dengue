@@ -4835,7 +4835,7 @@ padding-left: 10px;
 border: 1px solid rgba(32, 59, 73, 15);</string>
                        </property>
                        <property name="maximum">
-                        <number>200</number>
+                        <number>365</number>
                        </property>
                       </widget>
                      </item>
@@ -5031,7 +5031,7 @@ padding-left: 10px;
 border: 1px solid rgba(32, 59, 73, 15);</string>
                  </property>
                  <property name="maximum">
-                  <number>100</number>
+                  <number>50</number>
                  </property>
                 </widget>
                </item>

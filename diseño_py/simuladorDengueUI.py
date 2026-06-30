@@ -2293,7 +2293,7 @@ class Ui_objeto_inicial(object):
 "border-radius: 8px;\n"
 "padding-left: 10px;\n"
 "border: 1px solid rgba(32, 59, 73, 15);")
-        self.sb_duracion_dias.setMaximum(200)
+        self.sb_duracion_dias.setMaximum(365)
 
         self.gridLayout_14.addWidget(self.sb_duracion_dias, 0, 0, 1, 1)
 
@@ -2383,7 +2383,7 @@ class Ui_objeto_inicial(object):
 "border-radius: 8px;\n"
 "padding-left: 10px;\n"
 "border: 1px solid rgba(32, 59, 73, 15);")
-        self.sb_dias_recuperacion.setMaximum(100)
+        self.sb_dias_recuperacion.setMaximum(50)
 
         self.horizontalLayout_10.addWidget(self.sb_dias_recuperacion)
 
