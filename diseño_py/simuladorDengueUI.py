@@ -1892,247 +1892,6 @@ class Ui_objeto_inicial(object):
 
         self.verticalLayout_14.addWidget(self.label_9)
 
-        self.frame_28 = QFrame(self.frame_20)
-        self.frame_28.setObjectName(u"frame_28")
-        sizePolicy15.setHeightForWidth(self.frame_28.sizePolicy().hasHeightForWidth())
-        self.frame_28.setSizePolicy(sizePolicy15)
-        self.frame_28.setStyleSheet(u"border:0px;")
-        self.frame_28.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_28.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_15 = QHBoxLayout(self.frame_28)
-        self.horizontalLayout_15.setSpacing(2)
-        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.frame_29 = QFrame(self.frame_28)
-        self.frame_29.setObjectName(u"frame_29")
-        self.frame_29.setMinimumSize(QSize(30, 30))
-        self.frame_29.setMaximumSize(QSize(30, 30))
-        self.frame_29.setStyleSheet(u"border:0px;\n"
-"image: url(:/svg/humano.svg);\n"
-"border-radius:0px;\n"
-"background-color: none;")
-        self.frame_29.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_29.setFrameShadow(QFrame.Shadow.Raised)
-
-        self.horizontalLayout_15.addWidget(self.frame_29)
-
-        self.label_21 = QLabel(self.frame_28)
-        self.label_21.setObjectName(u"label_21")
-        sizePolicy10.setHeightForWidth(self.label_21.sizePolicy().hasHeightForWidth())
-        self.label_21.setSizePolicy(sizePolicy10)
-        self.label_21.setFont(font2)
-        self.label_21.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_21.setAutoFillBackground(False)
-        self.label_21.setStyleSheet(u"background: none;\n"
-"border:none;\n"
-"color: rgb(150, 161, 168);\n"
-"")
-
-        self.horizontalLayout_15.addWidget(self.label_21)
-
-
-        self.verticalLayout_14.addWidget(self.frame_28)
-
-        self.frame_27 = QFrame(self.frame_20)
-        self.frame_27.setObjectName(u"frame_27")
-        sizePolicy16.setHeightForWidth(self.frame_27.sizePolicy().hasHeightForWidth())
-        self.frame_27.setSizePolicy(sizePolicy16)
-        self.frame_27.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_27.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_13 = QVBoxLayout(self.frame_27)
-        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.frame_12 = QFrame(self.frame_27)
-        self.frame_12.setObjectName(u"frame_12")
-        sizePolicy17 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
-        sizePolicy17.setHorizontalStretch(0)
-        sizePolicy17.setVerticalStretch(0)
-        sizePolicy17.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
-        self.frame_12.setSizePolicy(sizePolicy17)
-        self.frame_12.setStyleSheet(u"border: 1px solid rgba(162, 170, 173, 60);\n"
-"border:none;\n"
-"border-radius:10px;")
-        self.frame_12.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_12.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_7 = QHBoxLayout(self.frame_12)
-        self.horizontalLayout_7.setSpacing(2)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.horizontalLayout_7.setContentsMargins(5, 5, 5, 5)
-        self.label_12 = QLabel(self.frame_12)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setFont(font2)
-        self.label_12.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_12.setAutoFillBackground(False)
-        self.label_12.setStyleSheet(u"background: none;\n"
-"border:none;\n"
-"color: rgb(44, 65, 76);\n"
-"")
-
-        self.horizontalLayout_7.addWidget(self.label_12)
-
-        self.sb_humanos_infectados = QSpinBox(self.frame_12)
-        self.sb_humanos_infectados.setObjectName(u"sb_humanos_infectados")
-        sizePolicy18 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
-        sizePolicy18.setHorizontalStretch(0)
-        sizePolicy18.setVerticalStretch(0)
-        sizePolicy18.setHeightForWidth(self.sb_humanos_infectados.sizePolicy().hasHeightForWidth())
-        self.sb_humanos_infectados.setSizePolicy(sizePolicy18)
-        self.sb_humanos_infectados.setMinimumSize(QSize(0, 34))
-        self.sb_humanos_infectados.setMaximumSize(QSize(120, 34))
-        self.sb_humanos_infectados.setFont(font2)
-        self.sb_humanos_infectados.setStyleSheet(u"color: rgb(44, 65, 76);\n"
-"background-color: rgba(240, 244, 247, 125);\n"
-"border-radius: 8px;\n"
-"padding-left: 10px;\n"
-"border: 1px solid rgba(32, 59, 73, 15);")
-        self.sb_humanos_infectados.setMaximum(100000000)
-
-        self.horizontalLayout_7.addWidget(self.sb_humanos_infectados)
-
-
-        self.verticalLayout_13.addWidget(self.frame_12)
-
-
-        self.verticalLayout_14.addWidget(self.frame_27)
-
-        self.frame_25 = QFrame(self.frame_20)
-        self.frame_25.setObjectName(u"frame_25")
-        sizePolicy15.setHeightForWidth(self.frame_25.sizePolicy().hasHeightForWidth())
-        self.frame_25.setSizePolicy(sizePolicy15)
-        self.frame_25.setStyleSheet(u"border:0px;")
-        self.frame_25.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_25.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_14 = QHBoxLayout(self.frame_25)
-        self.horizontalLayout_14.setSpacing(2)
-        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
-        self.frame_26 = QFrame(self.frame_25)
-        self.frame_26.setObjectName(u"frame_26")
-        self.frame_26.setMinimumSize(QSize(30, 30))
-        self.frame_26.setMaximumSize(QSize(30, 30))
-        self.frame_26.setStyleSheet(u"border:0px;\n"
-"border-radius:0px;\n"
-"image: url(:/svg/Boton Nueva Simulacion.svg);\n"
-"background-color:none;")
-        self.frame_26.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_26.setFrameShadow(QFrame.Shadow.Raised)
-
-        self.horizontalLayout_14.addWidget(self.frame_26)
-
-        self.label_20 = QLabel(self.frame_25)
-        self.label_20.setObjectName(u"label_20")
-        sizePolicy10.setHeightForWidth(self.label_20.sizePolicy().hasHeightForWidth())
-        self.label_20.setSizePolicy(sizePolicy10)
-        font6 = QFont()
-        font6.setFamilies([u"Inter"])
-        font6.setPointSize(11)
-        self.label_20.setFont(font6)
-        self.label_20.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_20.setAutoFillBackground(False)
-        self.label_20.setStyleSheet(u"background: none;\n"
-"border:none;\n"
-"color: rgb(150, 161, 168);\n"
-"")
-
-        self.horizontalLayout_14.addWidget(self.label_20)
-
-
-        self.verticalLayout_14.addWidget(self.frame_25)
-
-        self.frame_24 = QFrame(self.frame_20)
-        self.frame_24.setObjectName(u"frame_24")
-        self.frame_24.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_24.setFrameShadow(QFrame.Shadow.Raised)
-        self.verticalLayout_12 = QVBoxLayout(self.frame_24)
-        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
-        self.verticalLayout_12.setContentsMargins(-1, 5, -1, 5)
-        self.frame = QFrame(self.frame_24)
-        self.frame.setObjectName(u"frame")
-        self.frame.setStyleSheet(u"border: 1px solid rgba(162, 170, 173, 60);\n"
-"border:none;\n"
-"border-radius:10px;")
-        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_5 = QHBoxLayout(self.frame)
-        self.horizontalLayout_5.setSpacing(2)
-        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.horizontalLayout_5.setContentsMargins(5, 5, 5, 5)
-        self.label_10 = QLabel(self.frame)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setFont(font2)
-        self.label_10.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_10.setAutoFillBackground(False)
-        self.label_10.setStyleSheet(u"background: none;\n"
-"border:none;\n"
-"color: rgb(44, 65, 76);\n"
-"")
-
-        self.horizontalLayout_5.addWidget(self.label_10)
-
-        self.sb_poblacion_mosquito = QSpinBox(self.frame)
-        self.sb_poblacion_mosquito.setObjectName(u"sb_poblacion_mosquito")
-        sizePolicy18.setHeightForWidth(self.sb_poblacion_mosquito.sizePolicy().hasHeightForWidth())
-        self.sb_poblacion_mosquito.setSizePolicy(sizePolicy18)
-        self.sb_poblacion_mosquito.setMinimumSize(QSize(0, 34))
-        self.sb_poblacion_mosquito.setMaximumSize(QSize(120, 34))
-        self.sb_poblacion_mosquito.setFont(font2)
-        self.sb_poblacion_mosquito.setStyleSheet(u"color: rgb(44, 65, 76);\n"
-"background-color: rgba(240, 244, 247, 125);\n"
-"border-radius: 8px;\n"
-"padding-left: 10px;\n"
-"border: 1px solid rgba(32, 59, 73, 15);\n"
-"")
-        self.sb_poblacion_mosquito.setMaximum(100000000)
-
-        self.horizontalLayout_5.addWidget(self.sb_poblacion_mosquito)
-
-
-        self.verticalLayout_12.addWidget(self.frame)
-
-        self.frame_11 = QFrame(self.frame_24)
-        self.frame_11.setObjectName(u"frame_11")
-        self.frame_11.setStyleSheet(u"border: 1px solid rgba(162, 170, 173, 60);\n"
-"border:none;\n"
-"border-radius:10px;")
-        self.frame_11.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame_11.setFrameShadow(QFrame.Shadow.Raised)
-        self.horizontalLayout_6 = QHBoxLayout(self.frame_11)
-        self.horizontalLayout_6.setSpacing(2)
-        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.horizontalLayout_6.setContentsMargins(5, 5, 5, 5)
-        self.label_11 = QLabel(self.frame_11)
-        self.label_11.setObjectName(u"label_11")
-        self.label_11.setFont(font2)
-        self.label_11.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.label_11.setAutoFillBackground(False)
-        self.label_11.setStyleSheet(u"background: none;\n"
-"border:none;\n"
-"color: rgb(44, 65, 76);\n"
-"")
-
-        self.horizontalLayout_6.addWidget(self.label_11)
-
-        self.sb_mosquitos_infectados = QSpinBox(self.frame_11)
-        self.sb_mosquitos_infectados.setObjectName(u"sb_mosquitos_infectados")
-        sizePolicy18.setHeightForWidth(self.sb_mosquitos_infectados.sizePolicy().hasHeightForWidth())
-        self.sb_mosquitos_infectados.setSizePolicy(sizePolicy18)
-        self.sb_mosquitos_infectados.setMinimumSize(QSize(0, 34))
-        self.sb_mosquitos_infectados.setMaximumSize(QSize(120, 34))
-        self.sb_mosquitos_infectados.setFont(font2)
-        self.sb_mosquitos_infectados.setStyleSheet(u"color: rgb(44, 65, 76);\n"
-"background-color: rgba(240, 244, 247, 125);\n"
-"border-radius: 8px;\n"
-"padding-left: 10px;\n"
-"border: 1px solid rgba(32, 59, 73, 15);")
-        self.sb_mosquitos_infectados.setMaximum(100000000)
-
-        self.horizontalLayout_6.addWidget(self.sb_mosquitos_infectados)
-
-
-        self.verticalLayout_12.addWidget(self.frame_11)
-
-
-        self.verticalLayout_14.addWidget(self.frame_24)
-
         self.frame_22 = QFrame(self.frame_20)
         self.frame_22.setObjectName(u"frame_22")
         sizePolicy15.setHeightForWidth(self.frame_22.sizePolicy().hasHeightForWidth())
@@ -2161,6 +1920,9 @@ class Ui_objeto_inicial(object):
         self.label_19.setObjectName(u"label_19")
         sizePolicy10.setHeightForWidth(self.label_19.sizePolicy().hasHeightForWidth())
         self.label_19.setSizePolicy(sizePolicy10)
+        font6 = QFont()
+        font6.setFamilies([u"Inter"])
+        font6.setPointSize(11)
         self.label_19.setFont(font6)
         self.label_19.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
         self.label_19.setAutoFillBackground(False)
@@ -2204,9 +1966,10 @@ class Ui_objeto_inicial(object):
         self.verticalLayout_7.addWidget(self.label_18)
 
         self.cb_lugar = QComboBox(self.frame_18)
-        self.cb_lugar.addItem("")
-        self.cb_lugar.addItem("")
         self.cb_lugar.setObjectName(u"cb_lugar")
+        sizePolicy17 = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
+        sizePolicy17.setHorizontalStretch(0)
+        sizePolicy17.setVerticalStretch(0)
         sizePolicy17.setHeightForWidth(self.cb_lugar.sizePolicy().hasHeightForWidth())
         self.cb_lugar.setSizePolicy(sizePolicy17)
         self.cb_lugar.setMinimumSize(QSize(0, 34))
@@ -2271,11 +2034,11 @@ class Ui_objeto_inicial(object):
 
         self.frame_10 = QFrame(self.frame_14)
         self.frame_10.setObjectName(u"frame_10")
-        sizePolicy19 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
-        sizePolicy19.setHorizontalStretch(0)
-        sizePolicy19.setVerticalStretch(0)
-        sizePolicy19.setHeightForWidth(self.frame_10.sizePolicy().hasHeightForWidth())
-        self.frame_10.setSizePolicy(sizePolicy19)
+        sizePolicy18 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
+        sizePolicy18.setHorizontalStretch(0)
+        sizePolicy18.setVerticalStretch(0)
+        sizePolicy18.setHeightForWidth(self.frame_10.sizePolicy().hasHeightForWidth())
+        self.frame_10.setSizePolicy(sizePolicy18)
         self.frame_10.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_10.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_14 = QGridLayout(self.frame_10)
@@ -2283,8 +2046,11 @@ class Ui_objeto_inicial(object):
         self.gridLayout_14.setContentsMargins(0, 0, 0, 0)
         self.sb_duracion_dias = QSpinBox(self.frame_10)
         self.sb_duracion_dias.setObjectName(u"sb_duracion_dias")
-        sizePolicy18.setHeightForWidth(self.sb_duracion_dias.sizePolicy().hasHeightForWidth())
-        self.sb_duracion_dias.setSizePolicy(sizePolicy18)
+        sizePolicy19 = QSizePolicy(QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
+        sizePolicy19.setHorizontalStretch(0)
+        sizePolicy19.setVerticalStretch(0)
+        sizePolicy19.setHeightForWidth(self.sb_duracion_dias.sizePolicy().hasHeightForWidth())
+        self.sb_duracion_dias.setSizePolicy(sizePolicy19)
         self.sb_duracion_dias.setMinimumSize(QSize(0, 34))
         self.sb_duracion_dias.setMaximumSize(QSize(120, 34))
         self.sb_duracion_dias.setFont(font2)
@@ -2331,8 +2097,8 @@ class Ui_objeto_inicial(object):
 
         self.sb_tasa_transmision_h = QSpinBox(self.frame_15)
         self.sb_tasa_transmision_h.setObjectName(u"sb_tasa_transmision_h")
-        sizePolicy18.setHeightForWidth(self.sb_tasa_transmision_h.sizePolicy().hasHeightForWidth())
-        self.sb_tasa_transmision_h.setSizePolicy(sizePolicy18)
+        sizePolicy19.setHeightForWidth(self.sb_tasa_transmision_h.sizePolicy().hasHeightForWidth())
+        self.sb_tasa_transmision_h.setSizePolicy(sizePolicy19)
         self.sb_tasa_transmision_h.setMinimumSize(QSize(0, 34))
         self.sb_tasa_transmision_h.setMaximumSize(QSize(120, 34))
         self.sb_tasa_transmision_h.setFont(font2)
@@ -2373,8 +2139,8 @@ class Ui_objeto_inicial(object):
 
         self.sb_dias_recuperacion = QSpinBox(self.frame_16)
         self.sb_dias_recuperacion.setObjectName(u"sb_dias_recuperacion")
-        sizePolicy18.setHeightForWidth(self.sb_dias_recuperacion.sizePolicy().hasHeightForWidth())
-        self.sb_dias_recuperacion.setSizePolicy(sizePolicy18)
+        sizePolicy19.setHeightForWidth(self.sb_dias_recuperacion.sizePolicy().hasHeightForWidth())
+        self.sb_dias_recuperacion.setSizePolicy(sizePolicy19)
         self.sb_dias_recuperacion.setMinimumSize(QSize(0, 34))
         self.sb_dias_recuperacion.setMaximumSize(QSize(120, 34))
         self.sb_dias_recuperacion.setFont(font2)
@@ -2415,8 +2181,8 @@ class Ui_objeto_inicial(object):
 
         self.sb_tasa_muerte = QSpinBox(self.frame_17)
         self.sb_tasa_muerte.setObjectName(u"sb_tasa_muerte")
-        sizePolicy18.setHeightForWidth(self.sb_tasa_muerte.sizePolicy().hasHeightForWidth())
-        self.sb_tasa_muerte.setSizePolicy(sizePolicy18)
+        sizePolicy19.setHeightForWidth(self.sb_tasa_muerte.sizePolicy().hasHeightForWidth())
+        self.sb_tasa_muerte.setSizePolicy(sizePolicy19)
         self.sb_tasa_muerte.setMinimumSize(QSize(0, 34))
         self.sb_tasa_muerte.setMaximumSize(QSize(120, 34))
         self.sb_tasa_muerte.setFont(font2)
@@ -2434,6 +2200,238 @@ class Ui_objeto_inicial(object):
 
 
         self.verticalLayout_14.addWidget(self.frame_21)
+
+        self.frame_28 = QFrame(self.frame_20)
+        self.frame_28.setObjectName(u"frame_28")
+        sizePolicy15.setHeightForWidth(self.frame_28.sizePolicy().hasHeightForWidth())
+        self.frame_28.setSizePolicy(sizePolicy15)
+        self.frame_28.setStyleSheet(u"border:0px;")
+        self.frame_28.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_28.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_15 = QHBoxLayout(self.frame_28)
+        self.horizontalLayout_15.setSpacing(2)
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
+        self.frame_29 = QFrame(self.frame_28)
+        self.frame_29.setObjectName(u"frame_29")
+        self.frame_29.setMinimumSize(QSize(30, 30))
+        self.frame_29.setMaximumSize(QSize(30, 30))
+        self.frame_29.setStyleSheet(u"border:0px;\n"
+"image: url(:/svg/humano.svg);\n"
+"border-radius:0px;\n"
+"background-color: none;")
+        self.frame_29.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_29.setFrameShadow(QFrame.Shadow.Raised)
+
+        self.horizontalLayout_15.addWidget(self.frame_29)
+
+        self.label_21 = QLabel(self.frame_28)
+        self.label_21.setObjectName(u"label_21")
+        sizePolicy10.setHeightForWidth(self.label_21.sizePolicy().hasHeightForWidth())
+        self.label_21.setSizePolicy(sizePolicy10)
+        self.label_21.setFont(font2)
+        self.label_21.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_21.setAutoFillBackground(False)
+        self.label_21.setStyleSheet(u"background: none;\n"
+"border:none;\n"
+"color: rgb(150, 161, 168);\n"
+"")
+
+        self.horizontalLayout_15.addWidget(self.label_21)
+
+
+        self.verticalLayout_14.addWidget(self.frame_28)
+
+        self.frame_27 = QFrame(self.frame_20)
+        self.frame_27.setObjectName(u"frame_27")
+        sizePolicy16.setHeightForWidth(self.frame_27.sizePolicy().hasHeightForWidth())
+        self.frame_27.setSizePolicy(sizePolicy16)
+        self.frame_27.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_27.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_13 = QVBoxLayout(self.frame_27)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.frame_12 = QFrame(self.frame_27)
+        self.frame_12.setObjectName(u"frame_12")
+        sizePolicy17.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
+        self.frame_12.setSizePolicy(sizePolicy17)
+        self.frame_12.setStyleSheet(u"border: 1px solid rgba(162, 170, 173, 60);\n"
+"border:none;\n"
+"border-radius:10px;")
+        self.frame_12.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_12.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_7 = QHBoxLayout(self.frame_12)
+        self.horizontalLayout_7.setSpacing(2)
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.horizontalLayout_7.setContentsMargins(5, 5, 5, 5)
+        self.label_12 = QLabel(self.frame_12)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setFont(font2)
+        self.label_12.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_12.setAutoFillBackground(False)
+        self.label_12.setStyleSheet(u"background: none;\n"
+"border:none;\n"
+"color: rgb(44, 65, 76);\n"
+"")
+
+        self.horizontalLayout_7.addWidget(self.label_12)
+
+        self.sb_humanos_infectados = QSpinBox(self.frame_12)
+        self.sb_humanos_infectados.setObjectName(u"sb_humanos_infectados")
+        sizePolicy19.setHeightForWidth(self.sb_humanos_infectados.sizePolicy().hasHeightForWidth())
+        self.sb_humanos_infectados.setSizePolicy(sizePolicy19)
+        self.sb_humanos_infectados.setMinimumSize(QSize(0, 34))
+        self.sb_humanos_infectados.setMaximumSize(QSize(120, 34))
+        self.sb_humanos_infectados.setFont(font2)
+        self.sb_humanos_infectados.setStyleSheet(u"color: rgb(44, 65, 76);\n"
+"background-color: rgba(240, 244, 247, 125);\n"
+"border-radius: 8px;\n"
+"padding-left: 10px;\n"
+"border: 1px solid rgba(32, 59, 73, 15);")
+        self.sb_humanos_infectados.setMaximum(100000000)
+
+        self.horizontalLayout_7.addWidget(self.sb_humanos_infectados)
+
+
+        self.verticalLayout_13.addWidget(self.frame_12)
+
+
+        self.verticalLayout_14.addWidget(self.frame_27)
+
+        self.frame_25 = QFrame(self.frame_20)
+        self.frame_25.setObjectName(u"frame_25")
+        sizePolicy15.setHeightForWidth(self.frame_25.sizePolicy().hasHeightForWidth())
+        self.frame_25.setSizePolicy(sizePolicy15)
+        self.frame_25.setStyleSheet(u"border:0px;")
+        self.frame_25.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_25.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_14 = QHBoxLayout(self.frame_25)
+        self.horizontalLayout_14.setSpacing(2)
+        self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
+        self.horizontalLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.frame_26 = QFrame(self.frame_25)
+        self.frame_26.setObjectName(u"frame_26")
+        self.frame_26.setMinimumSize(QSize(30, 30))
+        self.frame_26.setMaximumSize(QSize(30, 30))
+        self.frame_26.setStyleSheet(u"border:0px;\n"
+"border-radius:0px;\n"
+"image: url(:/svg/Boton Nueva Simulacion.svg);\n"
+"background-color:none;")
+        self.frame_26.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_26.setFrameShadow(QFrame.Shadow.Raised)
+
+        self.horizontalLayout_14.addWidget(self.frame_26)
+
+        self.label_20 = QLabel(self.frame_25)
+        self.label_20.setObjectName(u"label_20")
+        sizePolicy10.setHeightForWidth(self.label_20.sizePolicy().hasHeightForWidth())
+        self.label_20.setSizePolicy(sizePolicy10)
+        self.label_20.setFont(font6)
+        self.label_20.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_20.setAutoFillBackground(False)
+        self.label_20.setStyleSheet(u"background: none;\n"
+"border:none;\n"
+"color: rgb(150, 161, 168);\n"
+"")
+
+        self.horizontalLayout_14.addWidget(self.label_20)
+
+
+        self.verticalLayout_14.addWidget(self.frame_25)
+
+        self.frame_24 = QFrame(self.frame_20)
+        self.frame_24.setObjectName(u"frame_24")
+        self.frame_24.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_24.setFrameShadow(QFrame.Shadow.Raised)
+        self.verticalLayout_12 = QVBoxLayout(self.frame_24)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.verticalLayout_12.setContentsMargins(-1, 5, -1, 5)
+        self.frame = QFrame(self.frame_24)
+        self.frame.setObjectName(u"frame")
+        self.frame.setStyleSheet(u"border: 1px solid rgba(162, 170, 173, 60);\n"
+"border:none;\n"
+"border-radius:10px;")
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_5 = QHBoxLayout(self.frame)
+        self.horizontalLayout_5.setSpacing(2)
+        self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
+        self.horizontalLayout_5.setContentsMargins(5, 5, 5, 5)
+        self.label_10 = QLabel(self.frame)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setFont(font2)
+        self.label_10.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_10.setAutoFillBackground(False)
+        self.label_10.setStyleSheet(u"background: none;\n"
+"border:none;\n"
+"color: rgb(44, 65, 76);\n"
+"")
+
+        self.horizontalLayout_5.addWidget(self.label_10)
+
+        self.sb_poblacion_mosquito = QSpinBox(self.frame)
+        self.sb_poblacion_mosquito.setObjectName(u"sb_poblacion_mosquito")
+        sizePolicy19.setHeightForWidth(self.sb_poblacion_mosquito.sizePolicy().hasHeightForWidth())
+        self.sb_poblacion_mosquito.setSizePolicy(sizePolicy19)
+        self.sb_poblacion_mosquito.setMinimumSize(QSize(0, 34))
+        self.sb_poblacion_mosquito.setMaximumSize(QSize(120, 34))
+        self.sb_poblacion_mosquito.setFont(font2)
+        self.sb_poblacion_mosquito.setStyleSheet(u"color: rgb(44, 65, 76);\n"
+"background-color: rgba(240, 244, 247, 125);\n"
+"border-radius: 8px;\n"
+"padding-left: 10px;\n"
+"border: 1px solid rgba(32, 59, 73, 15);\n"
+"")
+        self.sb_poblacion_mosquito.setMaximum(100000000)
+
+        self.horizontalLayout_5.addWidget(self.sb_poblacion_mosquito)
+
+
+        self.verticalLayout_12.addWidget(self.frame)
+
+        self.frame_11 = QFrame(self.frame_24)
+        self.frame_11.setObjectName(u"frame_11")
+        self.frame_11.setStyleSheet(u"border: 1px solid rgba(162, 170, 173, 60);\n"
+"border:none;\n"
+"border-radius:10px;")
+        self.frame_11.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame_11.setFrameShadow(QFrame.Shadow.Raised)
+        self.horizontalLayout_6 = QHBoxLayout(self.frame_11)
+        self.horizontalLayout_6.setSpacing(2)
+        self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
+        self.horizontalLayout_6.setContentsMargins(5, 5, 5, 5)
+        self.label_11 = QLabel(self.frame_11)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setFont(font2)
+        self.label_11.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
+        self.label_11.setAutoFillBackground(False)
+        self.label_11.setStyleSheet(u"background: none;\n"
+"border:none;\n"
+"color: rgb(44, 65, 76);\n"
+"")
+
+        self.horizontalLayout_6.addWidget(self.label_11)
+
+        self.sb_mosquitos_infectados = QSpinBox(self.frame_11)
+        self.sb_mosquitos_infectados.setObjectName(u"sb_mosquitos_infectados")
+        sizePolicy19.setHeightForWidth(self.sb_mosquitos_infectados.sizePolicy().hasHeightForWidth())
+        self.sb_mosquitos_infectados.setSizePolicy(sizePolicy19)
+        self.sb_mosquitos_infectados.setMinimumSize(QSize(0, 34))
+        self.sb_mosquitos_infectados.setMaximumSize(QSize(120, 34))
+        self.sb_mosquitos_infectados.setFont(font2)
+        self.sb_mosquitos_infectados.setStyleSheet(u"color: rgb(44, 65, 76);\n"
+"background-color: rgba(240, 244, 247, 125);\n"
+"border-radius: 8px;\n"
+"padding-left: 10px;\n"
+"border: 1px solid rgba(32, 59, 73, 15);")
+        self.sb_mosquitos_infectados.setMaximum(100000000)
+
+        self.horizontalLayout_6.addWidget(self.sb_mosquitos_infectados)
+
+
+        self.verticalLayout_12.addWidget(self.frame_11)
+
+
+        self.verticalLayout_14.addWidget(self.frame_24)
 
 
         self.verticalLayout_9.addWidget(self.frame_20)
@@ -2505,16 +2503,8 @@ class Ui_objeto_inicial(object):
         self.label_62.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Tiempo de incubaci\u00f3n:</p></body></html>", None))
         self.l_tiempo_incubacion.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>000000</p></body></html>", None))
         self.label_9.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Datos de la simulacion</p></body></html>", None))
-        self.label_21.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p><span style=\" font-size:11pt;\">Configuraci\u00f3n de humanos</span></p></body></html>", None))
-        self.label_12.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Humanos infectados:</p></body></html>", None))
-        self.label_20.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Configuraci\u00f3n de mosquitos</p></body></html>", None))
-        self.label_10.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Poblacion mosquito:</p></body></html>", None))
-        self.label_11.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Mosquitos infectados:</p></body></html>", None))
         self.label_19.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Configuraci\u00f3n de la simulaci\u00f3n</p></body></html>", None))
         self.label_18.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Lugar de la simulacion:</p></body></html>", None))
-        self.cb_lugar.setItemText(0, QCoreApplication.translate("objeto_inicial", u"Punto Fijo", None))
-        self.cb_lugar.setItemText(1, QCoreApplication.translate("objeto_inicial", u"AntiguoAeropuerto", None))
-
         self.label_13.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Duracion de la Simulacion:</p></body></html>", None))
         self.cb_duracion_simulacion.setItemText(0, QCoreApplication.translate("objeto_inicial", u"Final de la infeccion", None))
         self.cb_duracion_simulacion.setItemText(1, QCoreApplication.translate("objeto_inicial", u"Personalizado", None))
@@ -2522,5 +2512,10 @@ class Ui_objeto_inicial(object):
         self.label_14.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Tasa de transmision:%</p></body></html>", None))
         self.label_15.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Dias de recuperacion:</p></body></html>", None))
         self.label_16.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Tasa de muertes:%</p></body></html>", None))
+        self.label_21.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p><span style=\" font-size:11pt;\">Configuraci\u00f3n de humanos</span></p></body></html>", None))
+        self.label_12.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Humanos infectados:</p></body></html>", None))
+        self.label_20.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Configuraci\u00f3n de mosquitos</p></body></html>", None))
+        self.label_10.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Poblacion mosquito:</p></body></html>", None))
+        self.label_11.setText(QCoreApplication.translate("objeto_inicial", u"<html><head/><body><p>Mosquitos infectados:</p></body></html>", None))
     # retranslateUi
 
