@@ -15,7 +15,8 @@ class AccionesBotonesTarjetas:
     def establecer_funciones_botones_inicio(self) -> None:
         # Boton "nueva simulacion"
         self.ui.pb_boton_nueva_simulacion.clicked.connect(
-            self.mostrar_tarjeta_datos_simulacion
+            #self.mostrar_tarjeta_datos_simulacion
+            lambda:self.ui.sw_panel_derecho.setCurrentIndex(1)
         )
         return None
 

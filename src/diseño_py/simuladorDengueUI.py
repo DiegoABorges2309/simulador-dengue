@@ -2432,8 +2432,6 @@ class Ui_objeto_inicial(object):
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.sw_tarjetas_datos.addWidget(self.page_2)
-        self.sw_tarjetas_datos.raise_()
-        self.f_frame_principal.raise_()
 
         self.retranslateUi(objeto_inicial)
 
