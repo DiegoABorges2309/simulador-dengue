@@ -461,8 +461,6 @@ class Ui_objeto_inicial(object):
 "border: 1px solid rgba(162, 170, 173, 100);")
         self.f_grafica_general_humano.setFrameShape(QFrame.Shape.StyledPanel)
         self.f_grafica_general_humano.setFrameShadow(QFrame.Shadow.Raised)
-        self.gridLayout_22 = QGridLayout(self.f_grafica_general_humano)
-        self.gridLayout_22.setObjectName(u"gridLayout_22")
 
         self.gridLayout_10.addWidget(self.f_grafica_general_humano, 0, 0, 1, 1)
 
@@ -488,8 +486,6 @@ class Ui_objeto_inicial(object):
 "border: 1px solid rgba(162, 170, 173, 100);")
         self.f_grafica_sistema_bombeo.setFrameShape(QFrame.Shape.StyledPanel)
         self.f_grafica_sistema_bombeo.setFrameShadow(QFrame.Shadow.Raised)
-        self.gridLayout_23 = QGridLayout(self.f_grafica_sistema_bombeo)
-        self.gridLayout_23.setObjectName(u"gridLayout_23")
 
         self.gridLayout_11.addWidget(self.f_grafica_sistema_bombeo, 0, 0, 1, 1)
 
@@ -1530,8 +1526,6 @@ class Ui_objeto_inicial(object):
 "border: 1px solid rgba(162, 170, 173, 100);")
         self.f_grafica_general_mosquito.setFrameShape(QFrame.Shape.StyledPanel)
         self.f_grafica_general_mosquito.setFrameShadow(QFrame.Shadow.Raised)
-        self.gridLayout_17 = QGridLayout(self.f_grafica_general_mosquito)
-        self.gridLayout_17.setObjectName(u"gridLayout_17")
 
         self.gridLayout_16.addWidget(self.f_grafica_general_mosquito, 0, 0, 1, 1)
 
@@ -1557,8 +1551,6 @@ class Ui_objeto_inicial(object):
 "border: 1px solid rgba(162, 170, 173, 100);")
         self.f_grafica_cantidad_mosquitos.setFrameShape(QFrame.Shape.StyledPanel)
         self.f_grafica_cantidad_mosquitos.setFrameShadow(QFrame.Shadow.Raised)
-        self.gridLayout_18 = QGridLayout(self.f_grafica_cantidad_mosquitos)
-        self.gridLayout_18.setObjectName(u"gridLayout_18")
 
         self.gridLayout_15.addWidget(self.f_grafica_cantidad_mosquitos, 0, 0, 1, 1)
 
@@ -2440,6 +2432,8 @@ class Ui_objeto_inicial(object):
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.sw_tarjetas_datos.addWidget(self.page_2)
+        self.sw_tarjetas_datos.raise_()
+        self.f_frame_principal.raise_()
 
         self.retranslateUi(objeto_inicial)
 
