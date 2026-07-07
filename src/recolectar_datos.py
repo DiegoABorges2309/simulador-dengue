@@ -28,5 +28,7 @@ class RecolectarDatos:
                 error_dialog.setText("El valor no puede ser cero.")
                 error_dialog.exec()
                 return None
+            print(valor)
+            return valor
         elif isinstance(widget, QComboBox):
             return widget.currentText()

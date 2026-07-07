@@ -76,28 +76,31 @@ class Motor:
             1.2 * dia_en_ciclo / (lapso_t_bombeo_agua - 1)
         )
 
-    def iniciar_simulacion(self) -> list:
+    def iniciar_simulacion(self) -> list | None:
         """
         Funcion que da inicio a la simulacion
         con los datos ingresados.
         """
-        dia = 0
-        while True:
-            dia += 1
-            self.variable_bombeo_agua(dia, 30)
-            self.euler.calculo_euler(self.modelo_seir, self.modelo_sei)
-            self.euler.dias_reales = 0.0
-            valores_dia_transcurrido = {
-                "dia": dia,
-                "humano": self.euler.variables_h[-1],
-                "vector": self.euler.variables_v[-1],
-            }
-            self.lista_de_dias.append(valores_dia_transcurrido)
-            if (
-                self.modelo_seir.infectados < 1
-                and self.modelo_seir.expuestos < 1
-                and self.modelo_sei.infectados < 1
-                and self.modelo_sei.expuestos < 1
-            ):
-                break
-        return self.lista_de_dias
+        try:
+            dia = 0
+            while True:
+                dia += 1
+                self.variable_bombeo_agua(dia, 30)
+                self.euler.calculo_euler(self.modelo_seir, self.modelo_sei)
+                self.euler.dias_reales = 0.0
+                valores_dia_transcurrido = {
+                    "dia": dia,
+                    "humano": self.euler.variables_h[-1],
+                    "vector": self.euler.variables_v[-1],
+                }
+                self.lista_de_dias.append(valores_dia_transcurrido)
+                if (
+                    self.modelo_seir.infectados < 1
+                    and self.modelo_seir.expuestos < 1
+                    and self.modelo_sei.infectados < 1
+                    and self.modelo_sei.expuestos < 1
+                ):
+                    break
+            return self.lista_de_dias
+        except Exception as e:
+            return None

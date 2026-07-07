@@ -38,3 +38,7 @@ class AccionesBotonesTarjetas:
     def cambiar_tarjeta_simulacion(self) -> None:
         self.ui.sw_panel_derecho.setCurrentIndex(1)
         return None
+
+    def cambiar_ventana_resultados_simulacion(self):
+        self.mostrar_tarjeta_datos_simulacion()
+        self.ui.sw_panel_derecho.setCurrentIndex(1)

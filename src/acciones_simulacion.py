@@ -1,7 +1,13 @@
-from PySide6.QtWidgets import QSpinBox
+from dataclasses import dataclass
+from PySide6.QtWidgets import QMessageBox, QSpinBox
 from recolectar_datos import RecolectarDatos
 from diseño_py.simuladorDengueUI import Ui_objeto_inicial
-from dataclasses import dataclass
+from acciones_tarjetas import AccionesBotonesTarjetas
+from motor_de_simulacion.motor_simulacion import (
+    DatosSimulacionHumanos,
+    DatosSimulacionVector,
+    Motor,
+)
 
 
 @dataclass
@@ -18,8 +24,11 @@ class EstadoSpinBoxes:
 
 
 class AccionesSimulacion:
-    def __init__(self, ui: Ui_objeto_inicial):
+    def __init__(
+        self, ui: Ui_objeto_inicial, control_tarjetas: AccionesBotonesTarjetas
+    ):
         self.ui = ui
+        self.control_tarjetas = control_tarjetas
         self.clase_datos = EstadoSpinBoxes()
         # Aqui se encuentran las función que reune
         # la conección de los botones con las acciones correspondientes:
@@ -30,9 +39,8 @@ class AccionesSimulacion:
     def establecer_funciones_simulacion_botones(self) -> None:
         # Boton "iniciar simulacion"
         self.ui.pb_boton_iniciar_simulacion.clicked.connect(
-            lambda: print("presionaste el boton inicio")
+            self.accion_iniciar_simualacion
         )
-        pass
 
     def establecer_comportamientos_simulacion_iniciales(self) -> None:
         self.ui.pb_boton_iniciar_simulacion.setEnabled(False)
@@ -131,3 +139,70 @@ class AccionesSimulacion:
                 "	background-color: rgb(29, 53, 65);\n"
                 "}"
             )
+
+    def recolectar_informacion_simulacion(self) -> list:
+        lista_widget = [
+            self.ui.sb_tasa_transmision_h,
+            self.ui.sb_dias_recuperacion,
+            self.ui.sb_tasa_muerte,
+            self.ui.sb_humanos_infectados,
+            self.ui.sb_poblacion_mosquito,
+            self.ui.sb_mosquitos_infectados,
+        ]
+
+        spinbox_oculto = self.ui.sb_duracion_dias
+        if not spinbox_oculto.isHidden():
+            lista_widget.append(spinbox_oculto)
+        lista_de_valores = []
+        for index, contenido in enumerate(lista_widget):
+            lista_de_valores.append(RecolectarDatos().recolectar_datos(contenido))
+        lista_de_valores.append(
+            self.ui.cb_lugar.itemData(self.ui.cb_lugar.currentIndex())
+        )
+        return lista_de_valores
+
+    def crear_clases_simulacion(self) -> list:
+        datos_recolectados = self.recolectar_informacion_simulacion()
+        periodo_de_incubacion = 0.2
+        tasa_nacimiento = 0.2
+        tasa_mortalidad_mosquito = tasa_nacimiento
+        tasa_picaduras = 0.33  # dato basado en una investigacion cientifica: https://pmc.ncbi.nlm.nih.gov/articles/PMC11359999/#sec2-viruses-16-01315
+        # otra manera de calcular la tasa de picaduras seria:
+        # tasa_picaduras = picaduras por mosquito(int) / humano por mosquito * dia
+        datos_sei = DatosSimulacionVector(
+            tasa_picaduras,
+            datos_recolectados[0] / 100,
+            periodo_de_incubacion,
+            tasa_nacimiento,
+            tasa_mortalidad_mosquito,
+        )
+
+        datos_seir = DatosSimulacionHumanos(
+            tasa_picaduras,
+            datos_recolectados[0] / 100,
+            periodo_de_incubacion,
+            1 / datos_recolectados[1],
+            datos_recolectados[2] / 100,
+        )
+
+        return [datos_seir, datos_sei, datos_recolectados]
+
+    def accion_iniciar_simualacion(self):
+        datos_iniciales = self.crear_clases_simulacion()
+        resultados = []
+        motor_simualacion = Motor(
+            datos_iniciales[2][-1].NUMERO_POBLACION_HUMANA,
+            datos_iniciales[2][3],
+            datos_iniciales[0],
+            datos_iniciales[2][4],
+            datos_iniciales[2][5],
+            datos_iniciales[1],
+        )
+        resultados = motor_simualacion.iniciar_simulacion()
+        if resultados is None:
+            error_dialog = QMessageBox()
+            error_dialog.setWindowTitle("Error")
+            error_dialog.setText("Error al ejecutar la simulacion.")
+            error_dialog.exec()
+        else:
+            self.control_tarjetas.cambiar_ventana_resultados_simulacion()

@@ -14,7 +14,7 @@ class AccionesBotones:
         self.presiono_boton_iniciar_simulacion = False
         self.ui = ui
         self.acciones_tarjetas = AccionesBotonesTarjetas(self.ui)
-        self.acciones_simulacion = AccionesSimulacion(self.ui)
+        self.acciones_simulacion = AccionesSimulacion(self.ui, self.acciones_tarjetas)
 
     def nueva_simulacion(self):
         if not self.presiono_boton_iniciar_simulacion:
